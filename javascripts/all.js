@@ -1,4 +1,4 @@
-if ($('.show-slider').length != 0) {
+if ($('.program-slider').length != 0) {
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -10,12 +10,13 @@ if ($('.show-slider').length != 0) {
     slidesToShow: 5,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
-    centerMode: true,
+    centerMode: false,
     centerPadding: '0px',
+    infinite: true,
     focusOnSelect: true,
     responsive: [
       {
-        breakpoint: 840,
+        breakpoint: 760,
         settings: {
           slidesToShow: 3
         }
