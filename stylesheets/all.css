@@ -309,6 +309,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 1024px) { .program-slider .slider-header { top: 48px; }
   .program-slider .slider-for .container, .program-slider .slider-for .index-countdown-inner { min-height: 640px; }
   .program-slider .slider-for .program-info { right: 48px; }
+  .program-slider .slider-for .program-info.program-02 .guest, .program-slider .slider-for .program-info.program-02 .title, .program-slider .slider-for .program-info.program-02 .time, .program-slider .slider-for .program-info.program-02 .link { padding-right: 64px; }
   .program-slider .slider-for .program-info .program-number { font-size: 108px; line-height: 120px; }
   .program-slider .slider-nav .slick-prev, .program-slider .slider-nav .slick-next { width: 70px; height: 96px; }
   .program-slider .slider-nav .slick-list { margin: 6px 70px; }
