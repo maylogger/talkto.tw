@@ -136,7 +136,7 @@ td, th { padding: 0; }
 
 .shs-bold { font-family: "source-han-sans-traditional", sans-serif; font-weight: 700; }
 
-.shs-heavy, .program-slider .slider-for .program-info, .talk .talk-title .program-content, .talk .record-tab a { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
+.shs-heavy, .pagination a, .program-slider .slider-for .program-info, .talk .talk-title .program-content, .talk .switch-tab a, .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span, .talk .point-of-view-list .content .title, .talk .polis-list .content .title { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
 
 .gotham-regular-wz-shs { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 400; }
 
@@ -225,6 +225,17 @@ img { max-width: 100%; margin-bottom: 24px; }
 .btn_outline:hover { border-color: #444444; background-color: transparent; }
 .btn_outline:disabled, .btn_outline.is-disabled { color: #999999; border-color: #dddddd; background-color: transparent; }
 
+.pagination { text-align: center; margin: 24px 0; padding: 0; list-style: none; }
+.pagination a { color: inherit; text-decoration: inherit; cursor: inherit; display: block; width: 30px; height: 30px; font-size: 18px; line-height: 30px; color: white; }
+.pagination a:active, .pagination a:focus { outline: none; }
+.pagination li { display: none; margin: 0 3px 3px; }
+.pagination li.active, .pagination li.pre-btn, .pagination li.next-btn { display: inline-block; }
+.pagination li.disabled a, .pagination li.disabled:hover a { border: none; color: #cccccc; cursor: default; pointer-events: none; }
+@media (min-width: 768px) { .pagination li { display: inline-block; }
+  .pagination li a { width: 42px; font-size: 24px; line-height: 48px; }
+  .pagination li a:hover { color: #e63082; }
+  .pagination li.active a { color: #e63082; } }
+
 .header { z-index: 1000; background-color: #0e0e0e; }
 .header .header-inner { padding-top: 24px; padding-bottom: 16px; border-bottom: 1px solid #e63082; }
 .header .header-inner:after { content: ""; display: table; clear: both; }
@@ -255,14 +266,15 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 1024px) { .introduce { padding: 72px 0; }
   .introduce .intro-content p { font-size: 24px; line-height: 36px; } }
 
-.block + .block { margin-top: 48px; }
-.block .block-title { margin-bottom: 24px; padding: 12px 0; font-size: 18px; line-height: 24px; border-bottom: 1px solid #e63082; }
-.block .block-title.center { text-align: center; padding: 24px 0; font-size: 21px; line-height: 48px; border-bottom: 2px solid #e63082; }
+.block + .block { margin-top: 24px; }
+.block .block-title { margin-bottom: 24px; padding: 12px 0; font-size: 16px; line-height: 24px; border-bottom: 1px solid #e63082; }
 .block .block-title .title-en, .block .block-title .title-tw { display: inline-block; letter-spacing: 0.1em; }
 .block .block-title .title-en { color: #e63082; }
 .block .block-title .title-tw { color: #aaaaaa; }
 .block .block-title .title-en + .title-tw:before { content: "/"; padding: 0 6px; }
 .block .block-content:after { content: ""; display: table; clear: both; }
+@media (min-width: 1024px) { .block + .block { margin-top: 120px; }
+  .block .block-title { font-size: 18px; line-height: 24px; } }
 
 .slider { background-color: #0e0e0e; overflow: hidden; }
 
@@ -332,9 +344,9 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .share-button span { display: inline-block; margin-right: 6px; vertical-align: text-top; font-size: 15px; line-height: 24px; }
 .share-button .fb-share, .share-button .tweet { display: -moz-inline-stack; display: inline-block; vertical-align: middle; }
-.share-button .fb-share { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon-sns-share.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 32px; height: 128px; background-image: none, url('/images/icon-sns-share.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 32px; height: 32px; margin-right: 3px; background-position: 0 0; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.share-button .fb-share { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon-sns-share.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 32px; height: 128px; background-image: none, url('/images/icon-sns-share.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 32px; height: 32px; margin-right: 3px; background-position: 0 0; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .share-button .fb-share:hover { background-position: 0 -32px; }
-.share-button .tweet { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon-sns-share.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 32px; height: 128px; background-image: none, url('/images/icon-sns-share.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 32px; height: 32px; background-position: 0 -64px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.share-button .tweet { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon-sns-share.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 32px; height: 128px; background-image: none, url('/images/icon-sns-share.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 32px; height: 32px; background-position: 0 -64px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .share-button .tweet:hover { background-position: 0 -96px; }
 
 .team { padding-bottom: 24px; text-align: center; }
@@ -345,21 +357,21 @@ img { max-width: 100%; margin-bottom: 24px; }
 .team .team-logo { max-width: 375px; margin-top: 48px; margin-left: auto; margin-right: auto; }
 .team .team-logo a { display: block; margin: 24px auto; }
 .team .team-logo .jldesign, .team .team-logo .thenewslens, .team .team-logo .thereporter, .team .team-logo .livehousein, .team .team-logo .unfold, .team .team-logo .simpleinfo, .team .team-logo .mgrmedia, .team .team-logo .tripmoment, .team .team-logo .musdm, .team .team-logo .whitelightstudio, .team .team-logo .designbutik, .team .team-logo .ifoffice, .team .team-logo .houth, .team .team-logo .boven, .team .team-logo .g0v { width: 96px; height: 96px; }
-.team .team-logo .jldesign { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/jldesign.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/jldesign.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .thenewslens { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/thenewslens.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/thenewslens.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .thereporter { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/thereporter.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/thereporter.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .livehousein { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/livehousein.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/livehousein.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .unfold { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/unfold.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/unfold.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .simpleinfo { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/simpleinfo.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/simpleinfo.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .mgrmedia { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/mgrmedia.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/mgrmedia.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .tripmoment { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/tripmoment.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/tripmoment.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .musdm { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/musdm.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/musdm.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .whitelightstudio { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/whitelightstudio.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/whitelightstudio.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .designbutik { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/designbutik.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/designbutik.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .ifoffice { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/ifoffice.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/ifoffice.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .houth { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/houth.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/houth.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .boven { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/boven.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/boven.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .g0v { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/g0v.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/g0v.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .jldesign { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/jldesign.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/jldesign.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .thenewslens { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/thenewslens.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/thenewslens.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .thereporter { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/thereporter.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/thereporter.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .livehousein { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/livehousein.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/livehousein.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .unfold { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/unfold.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/unfold.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .simpleinfo { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/simpleinfo.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/simpleinfo.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .mgrmedia { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/mgrmedia.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/mgrmedia.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .tripmoment { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/tripmoment.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/tripmoment.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .musdm { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/musdm.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/musdm.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .whitelightstudio { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/whitelightstudio.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/whitelightstudio.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .designbutik { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/designbutik.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/designbutik.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .ifoffice { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/ifoffice.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/ifoffice.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .houth { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/houth.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/houth.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .boven { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/boven.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/boven.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .g0v { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/g0v.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/g0v.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .team .break { display: none; }
 @media (min-width: 768px) { .team .team-member .name { display: inline-block; padding: 0 3px; font-size: 18px; line-height: 24px; }
   .team .team-member span { display: inline-block; padding: 0 3px; }
@@ -381,7 +393,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .index-countdown { position: relative; background: #0e0e0e url("/images/TTT-pattern.svg") center repeat; }
 
 .index-countdown-inner { max-width: 100%; padding-top: 72px; padding-bottom: 72px; color: white; text-align: center; }
-.index-countdown-inner .logo { margin-bottom: 24px; margin-left: auto; margin-right: auto; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 198px; height: 256px; background-image: none, url('/images/logo.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.index-countdown-inner .logo { margin-bottom: 24px; margin-left: auto; margin-right: auto; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 198px; height: 256px; background-image: none, url('/images/logo.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .index-countdown-inner .countdown .item, .index-countdown-inner .countdown .colon { display: inline-block; vertical-align: top; }
 .index-countdown-inner .countdown .item { width: 48px; }
 .index-countdown-inner .countdown .item .number { font-family: "Gotham SSm A", "Gotham SSm B", sans-serif; font-style: normal; font-weight: 700; font-size: 32px; line-height: 48px; }
@@ -407,7 +419,7 @@ img { max-width: 100%; margin-bottom: 24px; }
   .index-countdown-inner .polis-link { max-width: 320px; margin-top: 48px; font-size: 15px; line-height: 24px; }
   .index-countdown-inner .polis-link .slogan { font-size: 24px; line-height: 36px; } }
 @media (min-width: 1520px) { .index-countdown-inner { padding-top: 120px; padding-bottom: 120px; }
-  .index-countdown-inner .logo { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1448530204'); background-repeat: no-repeat; background-position: 50% 50%; width: 198px; height: 256px; background-image: none, url('/images/logo.svg?1448530204'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; margin-bottom: 72px; }
+  .index-countdown-inner .logo { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 198px; height: 256px; background-image: none, url('/images/logo.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; margin-bottom: 72px; }
   .index-countdown-inner .countdown .item { width: 186px; }
   .index-countdown-inner .countdown .item .number { font-size: 128px; line-height: 144px; }
   .index-countdown-inner .countdown .item .unit { font-size: 18px; line-height: 24px; }
@@ -415,7 +427,7 @@ img { max-width: 100%; margin-bottom: 24px; }
   .index-countdown-inner .polis-link { margin-top: 84px; } }
 
 .talk .container:after, .talk .index-countdown-inner:after { content: ""; display: table; clear: both; }
-.talk .talk-title { position: relative; margin-top: 72px; margin-bottom: 24px; margin-left: -2px; }
+.talk .talk-title { position: relative; margin-top: 48px; margin-bottom: 24px; margin-left: -2px; }
 .talk .talk-title:after { content: ""; display: table; clear: both; }
 .talk .talk-title .share { position: absolute; top: 0; right: 0; }
 .talk .talk-title .program-number { padding-right: 12px; color: white; font-size: 64px; line-height: 72px; }
@@ -429,24 +441,50 @@ img { max-width: 100%; margin-bottom: 24px; }
 .talk .talk-data:after { content: ""; display: table; clear: both; }
 .talk .polis-embed { padding-top: 72px; padding-bottom: 96px; background-color: #f7f7f7; }
 .talk .polis-embed iframe { width: 100%; border: none !important; }
-.talk .record-tab { margin: 0; padding: 0; border: 0; margin-bottom: 24px; list-style: none; }
-.talk .record-tab:after { content: ""; display: table; clear: both; }
-.talk .record-tab a { display: inline-block; width: 100%; font-size: 18px; line-height: 36px; color: #aaaaaa; text-decoration: none; }
-.talk .record-tab li { float: left; width: calc(50% - 2px); text-align: center; border-left: 1px solid #e63082; }
-.talk .record-tab li.active a { color: #e63082; }
-.talk .record-tab li:last-child { border-right: 1px solid #e63082; }
-.talk .record-content .tab-pane { position: relative; padding-top: 56.25%; }
-.talk .record-content .tab-pane iframe { position: absolute; top: 0; width: 100%; height: 100%; }
-.talk .point-of-view-list .list-item { padding-top: 48px; padding-bottom: 48px; }
-.talk .point-of-view-list .list-item:after { content: ""; display: table; clear: both; }
-.talk .point-of-view-list .list-item .point { float: left; width: 30%; }
-.talk .point-of-view-list .list-item .point span { display: inline-block; background-color: #e63082; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
-.talk .point-of-view-list .list-item .content { float: right; width: 70%; }
-@media (min-width: 768px) { .talk .talk-title .program-number { float: left; font-size: 72px; line-height: 84px; }
+.talk .switch-tab { margin: 0; padding: 0; border: 0; margin-bottom: 36px; list-style: none; }
+.talk .switch-tab:after { content: ""; display: table; clear: both; }
+.talk .switch-tab a { position: relative; display: inline-block; width: 100%; font-size: 18px; line-height: 30px; color: #aaaaaa; text-decoration: none; }
+.talk .switch-tab li { float: left; width: calc(50% - 2px); text-align: center; border-left: 1px solid #e63082; }
+.talk .switch-tab li.active a { color: #e63082; }
+.talk .switch-tab li.active a:after { content: ""; position: absolute; left: 50%; bottom: -16px; margin-left: -8px; border: 8px solid transparent; border-top-color: rgba(230, 48, 130, 0.7); }
+.talk .switch-tab li:last-child { border-right: 1px solid #e63082; }
+.talk .switch-content .tab-pane.iframe { position: relative; padding-top: 56.25%; }
+.talk .switch-content .tab-pane.iframe iframe { position: absolute; top: 0; width: 100%; height: 100%; }
+.talk .point-of-view-list .list-item, .talk .polis-list .list-item { padding-bottom: 12px; border-bottom: 1px solid #e63082; }
+.talk .point-of-view-list .list-item:after, .talk .polis-list .list-item:after { content: ""; display: table; clear: both; }
+.talk .point-of-view-list .point, .talk .point-of-view-list .percentage, .talk .polis-list .point, .talk .polis-list .percentage { margin-top: 36px; margin-bottom: 24px; }
+.talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span { display: inline-block; width: 72px; height: 72px; font-size: 32px; line-height: 66px; text-align: center; background-color: #e63082; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+.talk .point-of-view-list .percentage span, .talk .polis-list .percentage span { position: relative; font-size: 26px; line-height: 66px; }
+.talk .point-of-view-list .percentage span:after, .talk .polis-list .percentage span:after { content: "%"; position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: 16px; line-height: 30px; }
+.talk .point-of-view-list .percentage.bg_gray span, .talk .polis-list .percentage.bg_gray span { background-color: #aaaaaa; }
+.talk .point-of-view-list .content .title, .talk .polis-list .content .title { margin-bottom: 24px; font-size: 21px; line-height: 30px; }
+.talk .point-of-view-list .content .title br, .talk .polis-list .content .title br { display: none; }
+.talk .point-of-view-list .content p, .talk .polis-list .content p { color: #aaaaaa; font-size: 16px; line-height: 24px; }
+.talk .polis-list .list-item { position: relative; }
+.talk .polis-list .list-item .rank { position: absolute; top: 0; right: 0; color: #e63082; }
+.talk .polis-list .list-item .rank:before { content: "NO."; color: white; font-size: 11px; }
+.talk .polis-list .list-item .rank span { color: #e63082; }
+.talk .polis-list .content p { color: white; }
+.talk .point-of-view-list .list-item:last-child { border-bottom: none; }
+@media (min-width: 768px) { .talk .talk-title { margin-top: 72px; }
+  .talk .talk-title .program-number { float: left; font-size: 72px; line-height: 84px; }
   .talk .talk-title .program-content .guest { font-size: 18px; line-height: 36px; }
   .talk .talk-title .program-content .title { font-size: 32px; line-height: 36px; }
-  .talk .record-tab a { width: auto; font-size: 21px; line-height: 48px; padding: 0 48px; }
-  .talk .record-tab li { width: auto; } }
+  .talk .switch-tab a { width: auto; font-size: 21px; line-height: 48px; padding: 0 48px; }
+  .talk .switch-tab a br { display: none; }
+  .talk .switch-tab li { width: auto; }
+  .talk .point-of-view-list .list-item, .talk .polis-list .list-item { padding-top: 48px; padding-bottom: 48px; }
+  .talk .point-of-view-list .point, .talk .point-of-view-list .percentage, .talk .polis-list .point, .talk .polis-list .percentage { margin-top: 0px; float: left; width: 20%; }
+  .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span { display: inline-block; width: 120px; height: 120px; font-size: 64px; line-height: 114px; text-align: center; background-color: #e63082; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+  .talk .point-of-view-list .percentage span, .talk .polis-list .percentage span { font-size: 48px; line-height: 114px; }
+  .talk .point-of-view-list .percentage span:after, .talk .polis-list .percentage span:after { font-size: 21px; line-height: 48px; }
+  .talk .point-of-view-list .content, .talk .polis-list .content { float: left; width: 79.5%; max-width: 800px; }
+  .talk .point-of-view-list .content .title, .talk .polis-list .content .title { margin-bottom: 24px; font-size: 24px; line-height: 36px; }
+  .talk .point-of-view-list .content .title br, .talk .polis-list .content .title br { display: block; }
+  .talk .point-of-view-list .content p, .talk .polis-list .content p { font-size: 16px; line-height: 30px; }
+  .talk .polis-list .list-item { padding-right: 48px; }
+  .talk .polis-list .list-item .rank { top: 48px; }
+  .talk .polis-list .content p { font-size: 20px; line-height: 33px; } }
 @media (min-width: 1024px) { .talk .container, .talk .index-countdown-inner { position: relative; }
   .talk .main-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 64%; padding-right: 24px; }
   .talk .main-content.video { padding-right: 0; }
@@ -456,7 +494,7 @@ img { max-width: 100%; margin-bottom: 24px; }
   .talk .bio { font-size: 15px; line-height: 30px; }
   .talk .bio p { font-size: 15px; line-height: 30px; }
   .talk .talk-title .share { margin-top: 0.5em; }
-  .talk .record-tab a { font-size: 24px; line-height: 48px; }
+  .talk .switch-tab a { font-size: 24px; line-height: 48px; }
   .talk .side-content { float: right; width: 36%; }
   .talk .side-content.chat { position: absolute; top: 0; right: 0; bottom: 0; } }
 @media (min-width: 1186px) { .talk .main-content { width: 70%; }
