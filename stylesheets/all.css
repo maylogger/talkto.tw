@@ -136,7 +136,7 @@ td, th { padding: 0; }
 
 .shs-bold { font-family: "source-han-sans-traditional", sans-serif; font-weight: 700; }
 
-.shs-heavy, .program-slider .slider-for .program-info, .talk .talk-title .program-content { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
+.shs-heavy, .program-slider .slider-for .program-info, .talk .talk-title .program-content, .talk .record-tab a { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
 
 .gotham-regular-wz-shs { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 400; }
 
@@ -255,8 +255,10 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 1024px) { .introduce { padding: 72px 0; }
   .introduce .intro-content p { font-size: 24px; line-height: 36px; } }
 
-.block .block-title { margin-bottom: 24px; padding: 12px 0; border-bottom: 1px solid #e63082; }
-.block .block-title .title-en, .block .block-title .title-tw { display: inline-block; font-size: 18px; line-height: 24px; letter-spacing: 0.1em; }
+.block + .block { margin-top: 48px; }
+.block .block-title { margin-bottom: 24px; padding: 12px 0; font-size: 18px; line-height: 24px; border-bottom: 1px solid #e63082; }
+.block .block-title.center { text-align: center; padding: 24px 0; font-size: 21px; line-height: 48px; border-bottom: 2px solid #e63082; }
+.block .block-title .title-en, .block .block-title .title-tw { display: inline-block; letter-spacing: 0.1em; }
 .block .block-title .title-en { color: #e63082; }
 .block .block-title .title-tw { color: #aaaaaa; }
 .block .block-title .title-en + .title-tw:before { content: "/"; padding: 0 6px; }
@@ -309,7 +311,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 1024px) { .program-slider .slider-header { top: 48px; }
   .program-slider .slider-for .container, .program-slider .slider-for .index-countdown-inner { min-height: 640px; }
   .program-slider .slider-for .program-info { right: 48px; }
-  .program-slider .slider-for .program-info.program-02 .guest, .program-slider .slider-for .program-info.program-02 .title, .program-slider .slider-for .program-info.program-02 .time, .program-slider .slider-for .program-info.program-02 .link { padding-right: 64px; }
+  .program-slider .slider-for .program-info.program-02 .guest, .program-slider .slider-for .program-info.program-02 .title, .program-slider .slider-for .program-info.program-02 .time { padding-right: 64px; }
   .program-slider .slider-for .program-info .program-number { font-size: 108px; line-height: 120px; }
   .program-slider .slider-nav .slick-prev, .program-slider .slider-nav .slick-next { width: 70px; height: 96px; }
   .program-slider .slider-nav .slick-list { margin: 6px 70px; }
@@ -317,6 +319,16 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 1520px) { .program-slider .slider-header .logo { width: 120px; height: 156px; }
   .program-slider .slider-for .program-info .title { font-size: 56px; line-height: 66px; }
   .program-slider .slider-for .program-info .program-number { font-size: 128px; line-height: 126px; } }
+
+.live .livestream { position: relative; }
+.live .livestream:after { content: ""; display: table; clear: both; }
+.live .stream { position: relative; padding-top: 71.5%; }
+.live .chatroom { position: relative; padding-top: 70%; overflow: hidden; }
+.live .stream iframe, .live .chatroom iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+@media (min-width: 768px) { .live .livestream { margin-bottom: 48px; } }
+@media (min-width: 1024px) { .live .stream { padding-top: 56%; }
+  .live .chatroom { position: absolute; width: 100%; top: 0; right: 0; bottom: 0; padding-top: 0; }
+  .live .chatroom iframe { position: absolute; top: 0; bottom: 0; width: calc(100%); height: 100%; } }
 
 .share-button span { display: inline-block; margin-right: 6px; vertical-align: text-top; font-size: 15px; line-height: 24px; }
 .share-button .fb-share, .share-button .tweet { display: -moz-inline-stack; display: inline-block; vertical-align: middle; }
@@ -357,6 +369,14 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 1024px) { .team .team-member .name { font-size: 21px; line-height: 48px; }
   .team .team-logo { margin-top: 12px; } }
 @media (min-width: 768px) and (max-width: 1320px) { .team .break { display: block; } }
+
+.tab-content > .tab-pane { display: none; }
+
+.tab-content > .active { display: block; }
+
+.fade { opacity: 0; -webkit-transition: opacity 0.15s linear; -o-transition: opacity 0.15s linear; transition: opacity 0.15s linear; }
+
+.fade.in { opacity: 1; }
 
 .index-countdown { position: relative; background: #0e0e0e url("/images/TTT-pattern.svg") center repeat; }
 
@@ -406,18 +426,27 @@ img { max-width: 100%; margin-bottom: 24px; }
 .talk .talk-title .program-content .title { font-size: 24px; line-height: 30px; }
 .talk iframe { box-sizing: border-box; }
 .talk .talk-content { padding-top: 48px; padding-bottom: 48px; margin-bottom: 24px; }
-.talk .talk-content .livestream { position: relative; }
-.talk .talk-content .livestream:after { content: ""; display: table; clear: both; }
-.talk .stream { position: relative; padding-top: 71.5%; }
-.talk .chatroom { position: relative; padding-top: 70%; overflow: hidden; }
-.talk .stream iframe, .talk .chatroom iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .talk .talk-data:after { content: ""; display: table; clear: both; }
 .talk .polis-embed { padding-top: 72px; padding-bottom: 96px; background-color: #f7f7f7; }
 .talk .polis-embed iframe { width: 100%; border: none !important; }
-@media (min-width: 768px) { .talk .livestream { margin-bottom: 48px; }
-  .talk .talk-title .program-number { float: left; font-size: 72px; line-height: 84px; }
+.talk .record-tab { margin: 0; padding: 0; border: 0; margin-bottom: 24px; list-style: none; }
+.talk .record-tab:after { content: ""; display: table; clear: both; }
+.talk .record-tab a { display: inline-block; width: 100%; font-size: 18px; line-height: 36px; color: #aaaaaa; text-decoration: none; }
+.talk .record-tab li { float: left; width: calc(50% - 2px); text-align: center; border-left: 1px solid #e63082; }
+.talk .record-tab li.active a { color: #e63082; }
+.talk .record-tab li:last-child { border-right: 1px solid #e63082; }
+.talk .record-content .tab-pane { position: relative; padding-top: 56.25%; }
+.talk .record-content .tab-pane iframe { position: absolute; top: 0; width: 100%; height: 100%; }
+.talk .point-of-view-list .list-item { padding-top: 48px; padding-bottom: 48px; }
+.talk .point-of-view-list .list-item:after { content: ""; display: table; clear: both; }
+.talk .point-of-view-list .list-item .point { float: left; width: 30%; }
+.talk .point-of-view-list .list-item .point span { display: inline-block; background-color: #e63082; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+.talk .point-of-view-list .list-item .content { float: right; width: 70%; }
+@media (min-width: 768px) { .talk .talk-title .program-number { float: left; font-size: 72px; line-height: 84px; }
   .talk .talk-title .program-content .guest { font-size: 18px; line-height: 36px; }
-  .talk .talk-title .program-content .title { font-size: 32px; line-height: 36px; } }
+  .talk .talk-title .program-content .title { font-size: 32px; line-height: 36px; }
+  .talk .record-tab a { width: auto; font-size: 21px; line-height: 48px; padding: 0 48px; }
+  .talk .record-tab li { width: auto; } }
 @media (min-width: 1024px) { .talk .container, .talk .index-countdown-inner { position: relative; }
   .talk .main-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 64%; padding-right: 24px; }
   .talk .main-content.video { padding-right: 0; }
@@ -427,11 +456,9 @@ img { max-width: 100%; margin-bottom: 24px; }
   .talk .bio { font-size: 15px; line-height: 30px; }
   .talk .bio p { font-size: 15px; line-height: 30px; }
   .talk .talk-title .share { margin-top: 0.5em; }
+  .talk .record-tab a { font-size: 24px; line-height: 48px; }
   .talk .side-content { float: right; width: 36%; }
-  .talk .side-content.chat { position: absolute; top: 0; right: 0; bottom: 0; }
-  .talk .stream { padding-top: 56%; }
-  .talk .chatroom { position: absolute; width: 100%; top: 0; right: 0; bottom: 0; padding-top: 0; }
-  .talk .chatroom iframe { position: absolute; top: 0; bottom: 0; width: calc(100%); height: 100%; } }
+  .talk .side-content.chat { position: absolute; top: 0; right: 0; bottom: 0; } }
 @media (min-width: 1186px) { .talk .main-content { width: 70%; }
   .talk .side-content { width: 30%; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) { .talk .video { padding-top: 64%; } }
