@@ -130,13 +130,13 @@ td, th { padding: 0; }
 
 .shs-normal { font-family: "source-han-sans-traditional", sans-serif; font-weight: 300; }
 
-.shs-regular, .program-slider .slider-for .program-info .link, .team, .index-countdown-inner .polis-link { font-family: "source-han-sans-traditional", sans-serif; font-weight: 400; }
+.shs-regular, .program-slider .slider-for .program-info .link, .team, .live-countdown .live-countdown-inner .link { font-family: "source-han-sans-traditional", sans-serif; font-weight: 400; }
 
 .shs-medium { font-family: "source-han-sans-traditional", sans-serif; font-weight: 500; }
 
 .shs-bold { font-family: "source-han-sans-traditional", sans-serif; font-weight: 700; }
 
-.shs-heavy, .pagination a, .program-slider .slider-for .program-info, .talk .talk-title .program-content, .talk .switch-tab a, .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span, .talk .point-of-view-list .content .title, .talk .polis-list .content .title { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
+.shs-heavy, .pagination a, .program-slider .slider-for .program-info, .live-countdown .live-countdown-inner span, .talk .talk-title .program-content, .talk .switch-tab a, .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span, .talk .point-of-view-list .content .title, .talk .polis-list .content .title { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
 
 .gotham-regular-wz-shs { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 400; }
 
@@ -202,12 +202,12 @@ hr, .divider { margin-top: 24px; margin-bottom: 24px; border-top: 1px solid #ddd
 
 img { max-width: 100%; margin-bottom: 24px; }
 
-.container, .index-countdown-inner { max-width: 624px; padding-left: 24px; padding-right: 24px; margin-left: auto; margin-right: auto; padding: 0 18px; }
-.container:after, .index-countdown-inner:after { content: ""; display: table; clear: both; }
-@media (min-width: 768px) { .container, .index-countdown-inner { max-width: 840px; } }
-@media (min-width: 1024px) { .container, .index-countdown-inner { max-width: 1272px; } }
-@media (min-width: 768px) { .container, .index-countdown-inner { padding: 0 24px; } }
-@media (min-width: 1024px) { .container, .index-countdown-inner { padding: 0 48px; } }
+.container { max-width: 624px; padding-left: 24px; padding-right: 24px; margin-left: auto; margin-right: auto; padding: 0 18px; }
+.container:after { content: ""; display: table; clear: both; }
+@media (min-width: 768px) { .container { max-width: 840px; } }
+@media (min-width: 1024px) { .container { max-width: 1272px; } }
+@media (min-width: 768px) { .container { padding: 0 24px; } }
+@media (min-width: 1024px) { .container { padding: 0 48px; } }
 
 .btn { display: inline-block; margin-bottom: 0; padding: 5px 23px; border: 1px solid #dddddd; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; font-size: 15px; line-height: 24px; background-image: none; text-align: center; text-shadow: none; cursor: pointer; outline: none; white-space: nowrap; -webkit-user-select: none; -moz-user-select: none; user-select: none; color: #444444; background-color: #dddddd; }
 .btn:hover { text-decoration: none; color: #444444; border-color: #dddddd; background-color: #dddddd; }
@@ -260,7 +260,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 1024px) { .footer { padding: 72px 0; } }
 
 .introduce { padding: 24px 0; background-color: #1b1b1b; }
-.introduce .container, .introduce .index-countdown-inner { width: 80%; max-width: 720px; }
+.introduce .container { width: 80%; max-width: 720px; }
 .introduce .intro-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 @media (min-width: 768px) { .introduce { padding: 48px 0; } }
 @media (min-width: 1024px) { .introduce { padding: 72px 0; }
@@ -280,14 +280,14 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .program-slider { position: relative; }
 .program-slider .slider-header { position: absolute; z-index: 1000; top: 18px; left: 0; right: 0; height: 0; text-align: right; }
-.program-slider .slider-header .container, .program-slider .slider-header .index-countdown-inner { max-width: 1120px; height: 0; }
+.program-slider .slider-header .container { max-width: 1120px; height: 0; }
 .program-slider .slider-header .share { float: left; opacity: 0.7; }
 .program-slider .slider-header .share:hover { opacity: 1; }
 .program-slider .slider-header .logo { float: right; width: 62px; height: 80px; text-indent: -119988px; overflow: hidden; text-align: left; background: url("/images/logo.svg") center no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .program-slider .slider-for { max-width: 1520px; margin: 0 auto; }
 .program-slider .slider-for .slider-content { position: relative; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .program-slider .slider-for .slider-content:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgba(14, 14, 14, 0)), color-stop(50%, rgba(14, 14, 14, 0.1)), color-stop(100%, #0e0e0e)); background: -webkit-linear-gradient(to bottom, rgba(14, 14, 14, 0), rgba(14, 14, 14, 0.1), #0e0e0e); background: -moz-linear-gradient(to bottom, rgba(14, 14, 14, 0), rgba(14, 14, 14, 0.1), #0e0e0e); background: -o-linear-gradient(to bottom, rgba(14, 14, 14, 0), rgba(14, 14, 14, 0.1), #0e0e0e); background: linear-gradient(to bottom, rgba(14, 14, 14, 0), rgba(14, 14, 14, 0.1), #0e0e0e); }
-.program-slider .slider-for .container, .program-slider .slider-for .index-countdown-inner { position: relative; max-width: 1120px; min-height: 440px; max-height: 720px; height: 90vh; }
+.program-slider .slider-for .container { position: relative; max-width: 1120px; min-height: 440px; max-height: 720px; height: 90vh; }
 .program-slider .slider-for .program-info { position: absolute; right: 12px; bottom: 2.5%; }
 .program-slider .slider-for .program-info .guest { font-size: 18px; line-height: 36px; color: #e63082; letter-spacing: 0.1em; }
 .program-slider .slider-for .program-info .title { font-size: 30px; line-height: 36px; color: white; }
@@ -321,7 +321,7 @@ img { max-width: 100%; margin-bottom: 24px; }
   .program-slider .slider-for .program-info .program-number { font-size: 96px; line-height: 96px; }
   .program-slider .slider-for .program-info .link + .program-number { margin-top: -64px; } }
 @media (min-width: 1024px) { .program-slider .slider-header { top: 48px; }
-  .program-slider .slider-for .container, .program-slider .slider-for .index-countdown-inner { min-height: 640px; }
+  .program-slider .slider-for .container { min-height: 640px; }
   .program-slider .slider-for .program-info { right: 48px; }
   .program-slider .slider-for .program-info.program-02 .guest, .program-slider .slider-for .program-info.program-02 .title, .program-slider .slider-for .program-info.program-02 .time { padding-right: 64px; }
   .program-slider .slider-for .program-info .program-number { font-size: 108px; line-height: 120px; }
@@ -344,9 +344,9 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .share-button span { display: inline-block; margin-right: 6px; vertical-align: text-top; font-size: 15px; line-height: 24px; }
 .share-button .fb-share, .share-button .tweet { display: -moz-inline-stack; display: inline-block; vertical-align: middle; }
-.share-button .fb-share { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon-sns-share.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 32px; height: 128px; background-image: none, url('/images/icon-sns-share.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 32px; height: 32px; margin-right: 3px; background-position: 0 0; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.share-button .fb-share { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon-sns-share.png?1449061155'); background-repeat: no-repeat; background-position: 50% 50%; width: 32px; height: 128px; background-image: none, url('/images/icon-sns-share.svg?1449061155'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 32px; height: 32px; margin-right: 3px; background-position: 0 0; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .share-button .fb-share:hover { background-position: 0 -32px; }
-.share-button .tweet { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon-sns-share.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 32px; height: 128px; background-image: none, url('/images/icon-sns-share.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 32px; height: 32px; background-position: 0 -64px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.share-button .tweet { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon-sns-share.png?1449061155'); background-repeat: no-repeat; background-position: 50% 50%; width: 32px; height: 128px; background-image: none, url('/images/icon-sns-share.svg?1449061155'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 32px; height: 32px; background-position: 0 -64px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .share-button .tweet:hover { background-position: 0 -96px; }
 
 .team { padding-bottom: 24px; text-align: center; }
@@ -357,21 +357,21 @@ img { max-width: 100%; margin-bottom: 24px; }
 .team .team-logo { max-width: 375px; margin-top: 48px; margin-left: auto; margin-right: auto; }
 .team .team-logo a { display: block; margin: 24px auto; }
 .team .team-logo .jldesign, .team .team-logo .thenewslens, .team .team-logo .thereporter, .team .team-logo .livehousein, .team .team-logo .unfold, .team .team-logo .simpleinfo, .team .team-logo .mgrmedia, .team .team-logo .tripmoment, .team .team-logo .musdm, .team .team-logo .whitelightstudio, .team .team-logo .designbutik, .team .team-logo .ifoffice, .team .team-logo .houth, .team .team-logo .boven, .team .team-logo .g0v { width: 96px; height: 96px; }
-.team .team-logo .jldesign { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/jldesign.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/jldesign.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .thenewslens { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/thenewslens.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/thenewslens.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .thereporter { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/thereporter.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/thereporter.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .livehousein { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/livehousein.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/livehousein.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .unfold { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/unfold.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/unfold.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .simpleinfo { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/simpleinfo.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/simpleinfo.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .mgrmedia { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/mgrmedia.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/mgrmedia.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .tripmoment { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/tripmoment.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/tripmoment.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .musdm { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/musdm.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/musdm.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .whitelightstudio { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/whitelightstudio.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/whitelightstudio.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .designbutik { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/designbutik.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/designbutik.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .ifoffice { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/ifoffice.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/ifoffice.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .houth { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/houth.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/houth.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .boven { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/boven.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/boven.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.team .team-logo .g0v { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/g0v.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/g0v.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .jldesign { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/jldesign.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/jldesign.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .thenewslens { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/thenewslens.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/thenewslens.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .thereporter { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/thereporter.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/thereporter.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .livehousein { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/livehousein.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/livehousein.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .unfold { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/unfold.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/unfold.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .simpleinfo { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/simpleinfo.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/simpleinfo.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .mgrmedia { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/mgrmedia.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/mgrmedia.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .tripmoment { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/tripmoment.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/tripmoment.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .musdm { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/musdm.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/musdm.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .whitelightstudio { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/whitelightstudio.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/whitelightstudio.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .designbutik { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/designbutik.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/designbutik.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .ifoffice { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/ifoffice.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/ifoffice.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .houth { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/houth.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/houth.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .boven { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/boven.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/boven.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.team .team-logo .g0v { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/team/g0v.png?1449061156'); background-repeat: no-repeat; background-position: 50% 50%; width: 96px; height: 96px; background-image: none, url('/images/team/g0v.svg?1449061156'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .team .break { display: none; }
 @media (min-width: 768px) { .team .team-member .name { display: inline-block; padding: 0 3px; font-size: 18px; line-height: 24px; }
   .team .team-member span { display: inline-block; padding: 0 3px; }
@@ -390,43 +390,35 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .fade.in { opacity: 1; }
 
-.index-countdown { position: relative; background: #0e0e0e url("/images/TTT-pattern.svg") center repeat; }
+.live-countdown { position: relative; color: white; text-align: center; padding-top: 50%; }
+.live-countdown.program-bg { background-image: url("/images/program02_bg.jpg"); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.live-countdown.program-bg:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 80, color-stop(0%, rgba(14, 14, 14, 0.3)), color-stop(80%, #0e0e0e)); background: -webkit-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -moz-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -o-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); }
+.live-countdown .live-countdown-inner { z-index: 10; position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
+.live-countdown .live-countdown-inner span { display: block; margin: 0 auto 12px; font-size: 16px; line-height: 24px; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.2em; }
+.live-countdown .live-countdown-inner .link { margin-top: 12px; display: inline-block; padding: 6px 12px; font-size: 13px; line-height: 18px; color: white; background-color: #e63082; text-decoration: none; }
+.live-countdown .countdown .item, .live-countdown .countdown .colon { display: inline-block; vertical-align: top; }
+.live-countdown .countdown .item { width: 46px; }
+.live-countdown .countdown .item .number { font-family: "Gotham SSm A", "Gotham SSm B", sans-serif; font-style: normal; font-weight: 700; font-size: 30px; line-height: 30px; }
+.live-countdown .countdown .item .unit { font-family: "Gotham SSm A", "Gotham SSm B", sans-serif; font-style: normal; font-weight: 400; color: #aaaaaa; font-size: 10px; line-height: 24px; }
+.live-countdown .countdown .colon { font-size: 30px; line-height: 30px; }
+@media (min-width: 375px) { .live-countdown .live-countdown span { margin: 0 auto 16px; }
+  .live-countdown .countdown .item { width: 52px; }
+  .live-countdown .countdown .item .number { font-size: 36px; line-height: 36px; }
+  .live-countdown .countdown .item .unit { font-size: 12px; line-height: 24px; }
+  .live-countdown .countdown .colon { font-size: 36px; line-height: 36px; } }
+@media (min-width: 768px) { .live-countdown .live-countdown-inner span { font-size: 24px; line-height: 48px; }
+  .live-countdown .live-countdown-inner .link { margin-top: 36px; padding: 3px 18px; font-size: 18px; line-height: 36px; }
+  .live-countdown .countdown .item { width: 120px; }
+  .live-countdown .countdown .item .number { font-size: 84px; line-height: 96px; }
+  .live-countdown .countdown .item .unit { font-size: 16px; line-height: 24px; }
+  .live-countdown .countdown .colon { font-size: 72px; line-height: 96px; } }
+@media (min-width: 1024px) { .live-countdown { padding-top: 35.9%; }
+  .live-countdown .countdown .item { width: 140px; }
+  .live-countdown .countdown .item .number { font-size: 88px; line-height: 96px; }
+  .live-countdown .countdown .colon { font-size: 88px; line-height: 96px; } }
+@media (min-width: 1186px) { .live-countdown { padding-top: 39.1%; } }
 
-.index-countdown-inner { max-width: 100%; padding-top: 72px; padding-bottom: 72px; color: white; text-align: center; }
-.index-countdown-inner .logo { margin-bottom: 24px; margin-left: auto; margin-right: auto; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 198px; height: 256px; background-image: none, url('/images/logo.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.index-countdown-inner .countdown .item, .index-countdown-inner .countdown .colon { display: inline-block; vertical-align: top; }
-.index-countdown-inner .countdown .item { width: 48px; }
-.index-countdown-inner .countdown .item .number { font-family: "Gotham SSm A", "Gotham SSm B", sans-serif; font-style: normal; font-weight: 700; font-size: 32px; line-height: 48px; }
-.index-countdown-inner .countdown .item .unit { font-family: "Gotham SSm A", "Gotham SSm B", sans-serif; font-style: normal; font-weight: 400; color: #aaaaaa; font-size: 12px; line-height: 24px; }
-.index-countdown-inner .countdown .colon { font-size: 32px; line-height: 48px; }
-.index-countdown-inner .polis-link { display: block; max-width: 280px; margin-left: auto; margin-right: auto; margin-top: 32px; padding: 12px 15px 15px; font-size: 13px; line-height: 24px; color: white; background-color: #111111; border: 1px solid #6e6e6e; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
-.index-countdown-inner .polis-link:hover { background-color: #e63082; border-color: #e63082; text-decoration: none; }
-.index-countdown-inner .polis-link:hover .highlight { color: white; }
-.index-countdown-inner .polis-link:hover .go-to-polis { opacity: 0.85; }
-.index-countdown-inner .polis-link .slogan { font-size: 18px; line-height: 36px; }
-.index-countdown-inner .polis-link .go-to-polis { opacity: 0.6; -webkit-transition: opacity 0.25s; -moz-transition: opacity 0.25s; -o-transition: opacity 0.25s; transition: opacity 0.25s; }
-.index-countdown-inner .polis-link .date { font-family: "Gotham SSm A", "Gotham SSm B", sans-serif; font-style: normal; font-weight: 400; }
-.index-countdown-inner .polis-link .highlight { color: #e63082; -webkit-transition: color 0.25s; -moz-transition: color 0.25s; -o-transition: color 0.25s; transition: color 0.25s; }
-@media (min-width: 768px) { .index-countdown-inner .logo { margin-bottom: 36px; }
-  .index-countdown-inner .countdown .item { width: 100px; }
-  .index-countdown-inner .countdown .item .number { font-size: 72px; line-height: 96px; }
-  .index-countdown-inner .countdown .item .unit { font-size: 16px; line-height: 24px; }
-  .index-countdown-inner .countdown .colon { font-size: 72px; line-height: 96px; }
-  .index-countdown-inner .polis-link { margin-top: 36px; } }
-@media (min-width: 1024px) { .index-countdown-inner .countdown .item { width: 140px; }
-  .index-countdown-inner .countdown .item .number { font-size: 88px; line-height: 96px; }
-  .index-countdown-inner .countdown .colon { font-size: 88px; line-height: 96px; }
-  .index-countdown-inner .polis-link { max-width: 320px; margin-top: 48px; font-size: 15px; line-height: 24px; }
-  .index-countdown-inner .polis-link .slogan { font-size: 24px; line-height: 36px; } }
-@media (min-width: 1520px) { .index-countdown-inner { padding-top: 120px; padding-bottom: 120px; }
-  .index-countdown-inner .logo { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1448898255'); background-repeat: no-repeat; background-position: 50% 50%; width: 198px; height: 256px; background-image: none, url('/images/logo.svg?1448898255'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; margin-bottom: 72px; }
-  .index-countdown-inner .countdown .item { width: 186px; }
-  .index-countdown-inner .countdown .item .number { font-size: 128px; line-height: 144px; }
-  .index-countdown-inner .countdown .item .unit { font-size: 18px; line-height: 24px; }
-  .index-countdown-inner .countdown .colon { font-size: 128px; line-height: 144px; }
-  .index-countdown-inner .polis-link { margin-top: 84px; } }
-
-.talk .container:after, .talk .index-countdown-inner:after { content: ""; display: table; clear: both; }
+.talk .container:after { content: ""; display: table; clear: both; }
 .talk .talk-title { position: relative; margin-top: 48px; margin-bottom: 24px; margin-left: -2px; }
 .talk .talk-title:after { content: ""; display: table; clear: both; }
 .talk .talk-title .share { position: absolute; top: 0; right: 0; }
@@ -437,7 +429,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .talk .talk-title .program-content .guest { font-size: 18px; line-height: 36px; color: #e63082; letter-spacing: 0.1em; }
 .talk .talk-title .program-content .title { font-size: 24px; line-height: 30px; }
 .talk iframe { box-sizing: border-box; }
-.talk .talk-content { padding-top: 48px; padding-bottom: 48px; margin-bottom: 24px; }
+.talk .talk-content { padding-top: 24px; padding-bottom: 48px; margin-bottom: 24px; }
 .talk .talk-data:after { content: ""; display: table; clear: both; }
 .talk .polis-embed { padding-top: 72px; padding-bottom: 96px; background-color: #f7f7f7; }
 .talk .polis-embed iframe { width: 100%; border: none !important; }
@@ -448,6 +440,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .talk .switch-tab li.active a { color: #e63082; }
 .talk .switch-tab li.active a:after { content: ""; position: absolute; left: 50%; bottom: -16px; margin-left: -8px; border: 8px solid transparent; border-top-color: rgba(230, 48, 130, 0.7); }
 .talk .switch-tab li:last-child { border-right: 1px solid #e63082; }
+.talk .switch-content.video { max-width: 760px; margin: 0 auto; }
 .talk .switch-content .tab-pane.iframe { position: relative; padding-top: 56.25%; }
 .talk .switch-content .tab-pane.iframe iframe { position: absolute; top: 0; width: 100%; height: 100%; }
 .talk .point-of-view-list .list-item, .talk .polis-list .list-item { padding-bottom: 12px; border-bottom: 1px solid #e63082; }
@@ -466,7 +459,8 @@ img { max-width: 100%; margin-bottom: 24px; }
 .talk .polis-list .list-item .rank span { color: #e63082; }
 .talk .polis-list .content p { color: white; }
 .talk .point-of-view-list .list-item:last-child { border-bottom: none; }
-@media (min-width: 768px) { .talk .talk-title { margin-top: 72px; }
+@media (min-width: 768px) { .talk .talk-content { padding-top: 48px; }
+  .talk .talk-title { margin-top: 72px; }
   .talk .talk-title .program-number { float: left; font-size: 72px; line-height: 84px; }
   .talk .talk-title .program-content .guest { font-size: 18px; line-height: 36px; }
   .talk .talk-title .program-content .title { font-size: 32px; line-height: 36px; }
@@ -474,18 +468,18 @@ img { max-width: 100%; margin-bottom: 24px; }
   .talk .switch-tab a br { display: none; }
   .talk .switch-tab li { width: auto; }
   .talk .point-of-view-list .list-item, .talk .polis-list .list-item { padding-top: 48px; padding-bottom: 48px; }
-  .talk .point-of-view-list .point, .talk .point-of-view-list .percentage, .talk .polis-list .point, .talk .polis-list .percentage { margin-top: 0px; float: left; width: 20%; }
+  .talk .point-of-view-list .point, .talk .point-of-view-list .percentage, .talk .polis-list .point, .talk .polis-list .percentage { margin-top: 0px; float: left; width: 200px; }
   .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span { display: inline-block; width: 120px; height: 120px; font-size: 64px; line-height: 114px; text-align: center; background-color: #e63082; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
   .talk .point-of-view-list .percentage span, .talk .polis-list .percentage span { font-size: 48px; line-height: 114px; }
   .talk .point-of-view-list .percentage span:after, .talk .polis-list .percentage span:after { font-size: 21px; line-height: 48px; }
-  .talk .point-of-view-list .content, .talk .polis-list .content { float: left; width: 79.5%; max-width: 800px; }
+  .talk .point-of-view-list .content, .talk .polis-list .content { display: block; overflow: hidden; max-width: 800px; }
   .talk .point-of-view-list .content .title, .talk .polis-list .content .title { margin-bottom: 24px; font-size: 24px; line-height: 36px; }
   .talk .point-of-view-list .content .title br, .talk .polis-list .content .title br { display: block; }
   .talk .point-of-view-list .content p, .talk .polis-list .content p { font-size: 16px; line-height: 30px; }
   .talk .polis-list .list-item { padding-right: 48px; }
   .talk .polis-list .list-item .rank { top: 48px; }
   .talk .polis-list .content p { font-size: 20px; line-height: 33px; } }
-@media (min-width: 1024px) { .talk .container, .talk .index-countdown-inner { position: relative; }
+@media (min-width: 1024px) { .talk .container { position: relative; }
   .talk .main-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 64%; padding-right: 24px; }
   .talk .main-content.video { padding-right: 0; }
   .talk .main-content .block-title { width: 98%; }
@@ -496,7 +490,8 @@ img { max-width: 100%; margin-bottom: 24px; }
   .talk .talk-title .share { margin-top: 0.5em; }
   .talk .switch-tab a { font-size: 24px; line-height: 48px; }
   .talk .side-content { float: right; width: 36%; }
-  .talk .side-content.chat { position: absolute; top: 0; right: 0; bottom: 0; } }
+  .talk .side-content.chat { position: absolute; top: 0; right: 0; bottom: 0; }
+  .talk .point-of-view-list .point, .talk .point-of-view-list .percentage, .talk .polis-list .point, .talk .polis-list .percentage { width: 220px; } }
 @media (min-width: 1186px) { .talk .main-content { width: 70%; }
   .talk .side-content { width: 30%; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) { .talk .video { padding-top: 64%; } }

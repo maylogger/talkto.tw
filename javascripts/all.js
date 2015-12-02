@@ -24,3 +24,15 @@ if ($('.program-slider').length != 0) {
     ]
   });
 }
+
+$('#polis-link').on('click',function (e) {
+  e.preventDefault();
+
+  var target = this.hash,
+  $target = $(target);
+  var targetScrollTop = $target.offset().top;
+
+  $('html, body').stop().animate({
+      'scrollTop': targetScrollTop
+  }, 2000, 'swing');
+});
