@@ -340,6 +340,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 @media (min-width: 1024px) { .live .stream { padding-top: 56%; }
   .live .chatroom { position: absolute; width: 100%; top: 0; right: 0; bottom: 0; padding-top: 0; }
   .live .chatroom iframe { position: absolute; top: 0; bottom: 0; width: calc(100%); height: 100%; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) { .live .stream { padding-top: 64%; } }
 
 .share-button span { display: inline-block; margin-right: 6px; vertical-align: text-top; font-size: 15px; line-height: 24px; }
 .share-button .fb-share, .share-button .tweet { display: -moz-inline-stack; display: inline-block; vertical-align: middle; }
@@ -390,11 +391,13 @@ img { max-width: 100%; margin-bottom: 24px; }
 .fade.in { opacity: 1; }
 
 .live-countdown { position: relative; color: white; text-align: center; padding-top: 50%; }
-.live-countdown.program-bg { background-image: url("/images/program02_bg.jpg"); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-.live-countdown.program-bg:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 80, color-stop(0%, rgba(14, 14, 14, 0.3)), color-stop(80%, #0e0e0e)); background: -webkit-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -moz-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -o-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); }
+.live-countdown.counting { background-image: url("/images/program02_bg.jpg"); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.live-countdown.counting:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 80, color-stop(0%, rgba(14, 14, 14, 0.3)), color-stop(80%, #0e0e0e)); background: -webkit-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -moz-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -o-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); }
+.live-countdown.counting .live-countdown-inner span { display: block; }
+.live-countdown.counting .live-countdown-inner .link { display: inline-block; }
 .live-countdown .live-countdown-inner { z-index: 10; position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
-.live-countdown .live-countdown-inner span { display: block; margin: 0 auto 12px; font-size: 16px; line-height: 24px; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.2em; }
-.live-countdown .live-countdown-inner .link { margin-top: 12px; display: inline-block; padding: 6px 12px; font-size: 13px; line-height: 18px; color: white; background-color: #e63082; text-decoration: none; }
+.live-countdown .live-countdown-inner span { display: none; margin: 0 auto 12px; font-size: 16px; line-height: 24px; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.2em; }
+.live-countdown .live-countdown-inner .link { margin-top: 12px; display: none; padding: 6px 12px; font-size: 13px; line-height: 18px; color: white; background-color: #e63082; text-decoration: none; }
 .live-countdown .countdown .item, .live-countdown .countdown .colon { display: inline-block; vertical-align: top; }
 .live-countdown .countdown .item { width: 46px; }
 .live-countdown .countdown .item .number { font-family: "Gotham SSm A", "Gotham SSm B", sans-serif; font-style: normal; font-weight: 700; font-size: 30px; line-height: 30px; }
@@ -493,4 +496,3 @@ img { max-width: 100%; margin-bottom: 24px; }
   .talk .point-of-view-list .point, .talk .point-of-view-list .percentage, .talk .polis-list .point, .talk .polis-list .percentage { width: 220px; } }
 @media (min-width: 1186px) { .talk .main-content { width: 70%; }
   .talk .side-content { width: 30%; } }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) { .talk .video { padding-top: 64%; } }
