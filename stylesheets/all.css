@@ -278,7 +278,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .slider { background-color: #0e0e0e; overflow: hidden; }
 
-.program-slider { position: relative; }
+.program-slider { position: relative; max-height: 840px; overflow: hidden; }
 .program-slider .slider-header { position: absolute; z-index: 1000; top: 18px; left: 0; right: 0; height: 0; text-align: right; }
 .program-slider .slider-header .container { max-width: 1120px; height: 0; }
 .program-slider .slider-header .share { float: left; opacity: 0.7; }
@@ -292,12 +292,11 @@ img { max-width: 100%; margin-bottom: 24px; }
 .program-slider .slider-for .program-info .guest { font-size: 18px; line-height: 36px; color: #e63082; letter-spacing: 0.1em; }
 .program-slider .slider-for .program-info .title { font-size: 30px; line-height: 36px; color: white; }
 .program-slider .slider-for .program-info .time { font-size: 16px; line-height: 36px; color: #aaaaaa; }
-.program-slider .slider-for .program-info .link { margin-top: 6px; display: inline-block; padding: 6px 12px; color: white; background-color: #e63082; text-decoration: none; }
+.program-slider .slider-for .program-info .link { margin-top: 6px; display: inline-block; padding: 6px 12px; color: white; font-size: 13px; line-height: 24px; background-color: #e63082; text-decoration: none; }
 .program-slider .slider-for .program-info .program-number { color: white; font-size: 72px; line-height: 72px; text-align: right; letter-spacing: -3px; }
 .program-slider .slider-for .program-info .gray-number { opacity: 0.5; }
 .program-slider .slider-for .program-info .pink-number { color: #e63082; opacity: 1; }
 .program-slider .slider-for .program-info .link + .program-number { margin-top: -44px; }
-.program-slider .slider-for .program-info.program-02 .guest, .program-slider .slider-for .program-info.program-02 .title, .program-slider .slider-for .program-info.program-02 .time { padding-right: 12px; }
 .program-slider .slider-nav { max-width: 1120px; margin: 0 auto; }
 .program-slider .slider-nav .slick-prev, .program-slider .slider-nav .slick-next { position: absolute; top: 6px; width: 38px; height: 64px; color: white; background: transparent; border: none; }
 .program-slider .slider-nav .slick-prev, .program-slider .slider-nav .slick-next { text-indent: -119988px; overflow: hidden; text-align: left; opacity: 0.7; -webkit-transition: opacity 0.25s; -moz-transition: opacity 0.25s; -o-transition: opacity 0.25s; transition: opacity 0.25s; outline: none; }
@@ -318,13 +317,12 @@ img { max-width: 100%; margin-bottom: 24px; }
   .program-slider .slider-for .program-info .guest { font-size: 21px; line-height: 36px; }
   .program-slider .slider-for .program-info .title { font-size: 48px; line-height: 60px; }
   .program-slider .slider-for .program-info .time { font-size: 18px; line-height: 36px; }
-  .program-slider .slider-for .program-info .link { margin-top: 12px; padding: 6px 18px; font-size: 20px; line-height: 36px; }
+  .program-slider .slider-for .program-info .link { margin-top: 12px; padding: 6px 18px; font-size: 18px; line-height: 36px; }
   .program-slider .slider-for .program-info .program-number { font-size: 96px; line-height: 96px; }
   .program-slider .slider-for .program-info .link + .program-number { margin-top: -64px; } }
 @media (min-width: 1024px) { .program-slider .slider-header { top: 48px; }
   .program-slider .slider-for .container { min-height: 640px; }
   .program-slider .slider-for .program-info { right: 48px; }
-  .program-slider .slider-for .program-info.program-02 .guest, .program-slider .slider-for .program-info.program-02 .title, .program-slider .slider-for .program-info.program-02 .time { padding-right: 64px; }
   .program-slider .slider-for .program-info .program-number { font-size: 108px; line-height: 120px; }
   .program-slider .slider-nav .slick-prev, .program-slider .slider-nav .slick-next { width: 70px; height: 96px; }
   .program-slider .slider-nav .slick-list { margin: 6px 70px; }
