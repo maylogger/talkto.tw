@@ -136,11 +136,11 @@ td, th { padding: 0; }
 
 .shs-bold { font-family: "source-han-sans-traditional", sans-serif; font-weight: 700; }
 
-.shs-heavy, .pagination a, .program-slider .slider-for .program-info, .live-countdown .live-countdown-inner span, .talk .talk-title .program-content, .talk .switch-tab a, .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span, .talk .point-of-view-list .content .title, .talk .polis-list .content .title { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
+.shs-heavy, .pagination a, .program-slider .slider-for .program-info, .live-countdown .live-countdown-inner span, .talk .talk-title .program-content, .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span, .talk .point-of-view-list .content .title, .talk .polis-list .content .title { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
 
 .gotham-regular-wz-shs { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 400; }
 
-.gotham-bold-wz-shs, .block .block-title .title-en, .block .block-title .title-tw, .program-slider .slider-for .program-info .time, .program-slider .slider-for .program-info .program-number, .program-slider .slider-nav .slider-content, .talk .talk-title .program-number { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 700; }
+.gotham-bold-wz-shs, .block .block-title .title-en, .block .block-title .title-tw, .program-slider .slider-for .program-info .time, .program-slider .slider-for .program-info .program-number, .program-slider .slider-nav .slider-content, .archive .summary-inner .guest, .archive .summary-inner .title, .archive .summary-inner .program-number, .talk .talk-title .program-number { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 700; }
 
 * html { font-size: 100%; }
 
@@ -273,8 +273,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .block .block-title .title-tw { color: #aaaaaa; }
 .block .block-title .title-en + .title-tw:before { content: "/"; padding: 0 6px; }
 .block .block-content:after { content: ""; display: table; clear: both; }
-@media (min-width: 1024px) { .block + .block { margin-top: 120px; }
-  .block .block-title { font-size: 18px; line-height: 24px; } }
+@media (min-width: 1024px) { .block .block-title { font-size: 18px; line-height: 24px; } }
 
 .slider { background-color: #0e0e0e; overflow: hidden; }
 
@@ -420,6 +419,45 @@ img { max-width: 100%; margin-bottom: 24px; }
   .live-countdown .countdown .colon { font-size: 88px; line-height: 96px; } }
 @media (min-width: 1186px) { .live-countdown { padding-top: 39.1%; } }
 
+.archive { padding-top: 24px; padding-bottom: 48px; margin-bottom: 24px; }
+.archive .archive-header { position: relative; }
+.archive .archive-header:after { content: ""; display: table; clear: both; }
+.archive .archive-content { margin-top: 48px; }
+.archive .summary { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-top: 24px; padding: 18px; background-color: #1c1c1c; }
+.archive .summary:after { content: ""; display: table; clear: both; }
+.archive .summary-inner { position: relative; }
+.archive .summary-inner .share { position: absolute; top: -6px; right: 0; }
+.archive .summary-inner .guest { color: #e63082; }
+.archive .summary-inner .title { margin-top: 12px; margin-bottom: 12px; font-size: 24px; line-height: 36px; }
+.archive .summary-inner .intro { position: relative; z-index: 100; font-size: 13px; line-height: 24px; }
+.archive .summary-inner .link { margin: 0; padding: 0; border: 0; list-style: none; }
+.archive .summary-inner .link a { position: relative; display: inline-block; color: #e63082; font-size: 15px; line-height: 24px; font-weight: bold; }
+.archive .summary-inner .link a:after { position: absolute; top: 5px; right: -20px; content: ""; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/poplink.png?1449229237'); background-repeat: no-repeat; background-position: 50% 50%; width: 16px; height: 16px; background-image: none, url('/images/poplink.svg?1449229237'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.archive .summary-inner .program-number { margin-top: 24px; margin-left: -5px; font-size: 48px; line-height: 42px; }
+.archive .summary-inner .program-number .gray-number { opacity: 0.5; }
+.archive .summary-inner .program-number .pink-number { color: #e63082; }
+.archive .switch-tab { margin: 0; padding: 0; border: 0; list-style: none; text-align: center; }
+.archive .switch-tab:after { content: ""; display: table; clear: both; }
+.archive .switch-tab a { display: inline-block; padding: 5px 24px; font-size: 13px; line-height: 24px; font-weight: bold; color: #aaaaaa; text-decoration: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.archive .switch-tab li { display: inline-block; }
+.archive .switch-tab li.active a { color: white; background-color: #252525; }
+.archive .switch-content { padding-bottom: 18px; }
+.archive .switch-content .tab-pane.iframe { position: relative; padding-top: 56.25%; }
+.archive .switch-content .tab-pane.iframe iframe { position: absolute; top: 0; width: 100%; height: 100%; }
+@media (min-width: 768px) { .archive .archive-content { position: relative; }
+  .archive .archive-content .talk-data { float: left; width: calc(50% - 18px); }
+  .archive .archive-content .polis-data { float: right; width: calc(50% - 18px); } }
+@media (min-width: 1024px) { .archive { padding-top: 48px; }
+  .archive .summary { position: absolute; top: 0; bottom: 0; width: 39.9%; min-height: 100%; margin-top: 0px; padding: 36px; }
+  .archive .summary-inner { height: 100%; }
+  .archive .summary-inner .guest { font-size: 18px; line-height: 24px; }
+  .archive .summary-inner .title { font-size: 32px; line-height: 48px; margin-bottom: 24px; }
+  .archive .summary-inner .intro { font-size: 15px; line-height: 24px; }
+  .archive .summary-inner .program-number { position: absolute; left: 0; bottom: 0; font-size: 84px; line-height: 76px; }
+  .archive .record { float: right; width: 59.9%; }
+  .archive .switch-content { padding: 36px; }
+  .archive .archive-content .block-content { max-width: 90%; } }
+
 .talk .container:after { content: ""; display: table; clear: both; }
 .talk .talk-title { position: relative; margin-top: 48px; margin-bottom: 24px; margin-left: -2px; }
 .talk .talk-title:after { content: ""; display: table; clear: both; }
@@ -435,16 +473,6 @@ img { max-width: 100%; margin-bottom: 24px; }
 .talk .talk-data:after { content: ""; display: table; clear: both; }
 .talk .polis-embed { padding-top: 72px; padding-bottom: 96px; background-color: #f7f7f7; }
 .talk .polis-embed iframe { width: 100%; border: none !important; }
-.talk .switch-tab { margin: 0; padding: 0; border: 0; margin-bottom: 36px; list-style: none; }
-.talk .switch-tab:after { content: ""; display: table; clear: both; }
-.talk .switch-tab a { position: relative; display: inline-block; width: 100%; font-size: 18px; line-height: 30px; color: #aaaaaa; text-decoration: none; }
-.talk .switch-tab li { float: left; width: calc(50% - 2px); text-align: center; border-left: 1px solid #e63082; }
-.talk .switch-tab li.active a { color: #e63082; }
-.talk .switch-tab li.active a:after { content: ""; position: absolute; left: 50%; bottom: -16px; margin-left: -8px; border: 8px solid transparent; border-top-color: rgba(230, 48, 130, 0.7); }
-.talk .switch-tab li:last-child { border-right: 1px solid #e63082; }
-.talk .switch-content.video { max-width: 760px; margin: 0 auto; }
-.talk .switch-content .tab-pane.iframe { position: relative; padding-top: 56.25%; }
-.talk .switch-content .tab-pane.iframe iframe { position: absolute; top: 0; width: 100%; height: 100%; }
 .talk .point-of-view-list .list-item, .talk .polis-list .list-item { padding-bottom: 12px; border-bottom: 1px solid #e63082; }
 .talk .point-of-view-list .list-item:after, .talk .polis-list .list-item:after { content: ""; display: table; clear: both; }
 .talk .point-of-view-list .point, .talk .point-of-view-list .percentage, .talk .polis-list .point, .talk .polis-list .percentage { margin-top: 36px; margin-bottom: 24px; }
