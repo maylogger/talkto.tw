@@ -38,3 +38,19 @@ if ($('#polis-link').length != 0) {
     }, 500, 'swing');
   });
 }
+
+if ( $('.animation').length != 0 ) {
+  function section_animation() {
+    var animationElements = $('.animation')
+    for (var i = 0; i < animationElements.length; i++) {
+      new Waypoint({
+        element: animationElements[i],
+        handler: function(direction) {
+          $(this.element).addClass('is-active')
+        },
+        offset: '100%'
+      })
+    }
+  }
+  section_animation();
+}
