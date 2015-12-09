@@ -136,7 +136,7 @@ td, th { padding: 0; }
 
 .shs-bold { font-family: "source-han-sans-traditional", sans-serif; font-weight: 700; }
 
-.shs-heavy, .pagination a, .program-slider .slider-for .program-info, .live-countdown .live-countdown-inner span, .talk .talk-title .program-content, .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span, .talk .point-of-view-list .content .title, .talk .polis-list .content .title { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
+.shs-heavy, .pagination a, .program-slider .slider-for .program-info, .live-countdown .live-countdown-inner span, .talk .talk-title .program-content, .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span, .talk .point-of-view-list .content .title, .talk .polis-list .content .title, .talk .switch-tab a { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
 
 .gotham-light-wz-shs, .archive .point-of-view li:before { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 300; }
 
@@ -540,6 +540,16 @@ img { max-width: 100%; margin-bottom: 24px; }
 .talk .polis-list .list-item .rank span { color: #e63082; }
 .talk .polis-list .content p { color: white; }
 .talk .point-of-view-list .list-item:last-child { border-bottom: none; }
+.talk .switch-tab { margin: 0; padding: 0; border: 0; margin-bottom: 36px; list-style: none; }
+.talk .switch-tab:after { content: ""; display: table; clear: both; }
+.talk .switch-tab a { position: relative; display: inline-block; width: 100%; font-size: 18px; line-height: 30px; color: #aaaaaa; text-decoration: none; }
+.talk .switch-tab li { float: left; width: calc(50% - 2px); text-align: center; border-left: 1px solid #e63082; }
+.talk .switch-tab li.active a { color: #e63082; }
+.talk .switch-tab li.active a:after { content: ""; position: absolute; left: 50%; bottom: -16px; margin-left: -8px; border: 8px solid transparent; border-top-color: rgba(230, 48, 130, 0.7); }
+.talk .switch-tab li:last-child { border-right: 1px solid #e63082; }
+.talk .switch-content.video { max-width: 760px; margin: 0 auto; }
+.talk .switch-content .tab-pane.iframe { position: relative; padding-top: 56.25%; }
+.talk .switch-content .tab-pane.iframe iframe { position: absolute; top: 0; width: 100%; height: 100%; }
 @media (min-width: 768px) { .talk .talk-content { padding-top: 48px; }
   .talk .talk-title { margin-top: 72px; }
   .talk .talk-title .program-number { float: left; font-size: 72px; line-height: 84px; }
