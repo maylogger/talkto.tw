@@ -136,7 +136,7 @@ td, th { padding: 0; }
 
 .shs-bold { font-family: "source-han-sans-traditional", sans-serif; font-weight: 700; }
 
-.shs-heavy, .pagination a, .program-slider .slider-for .program-info, .live-countdown .live-countdown-inner span, .talk .talk-title .program-content, .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span, .talk .point-of-view-list .content .title, .talk .polis-list .content .title, .talk .switch-tab a { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
+.shs-heavy, .pagination a, .program-slider .slider-for .program-info, .live .live-end-info span, .live-countdown .live-countdown-inner span, .talk .talk-title .program-content, .talk .point-of-view-list .point span, .talk .point-of-view-list .percentage span, .talk .polis-list .point span, .talk .polis-list .percentage span, .talk .point-of-view-list .content .title, .talk .polis-list .content .title, .talk .switch-tab a { font-family: "source-han-sans-traditional", sans-serif; font-weight: 900; }
 
 .gotham-light-wz-shs, .archive .point-of-view li:before { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 300; }
 
@@ -330,16 +330,26 @@ img { max-width: 100%; margin-bottom: 24px; }
   .program-slider .slider-for .program-info .title { font-size: 56px; line-height: 66px; }
   .program-slider .slider-for .program-info .program-number { font-size: 128px; line-height: 126px; } }
 
-.live .livestream { position: relative; }
-.live .livestream:after { content: ""; display: table; clear: both; }
+.live .livestream, .live .livestream-end { position: relative; }
+.live .livestream:after, .live .livestream-end:after { content: ""; display: table; clear: both; }
 .live .stream { position: relative; padding-top: 71.5%; }
 .live .chatroom { position: relative; padding-top: 70%; overflow: hidden; }
 .live .stream iframe, .live .chatroom iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-@media (min-width: 768px) { .live .livestream { margin-bottom: 48px; } }
-@media (min-width: 1024px) { .live .stream { padding-top: 56%; }
+.live .live-end { position: relative; color: white; text-align: center; padding-top: 50%; background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.live .live-end:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 80, color-stop(0%, rgba(14, 14, 14, 0.3)), color-stop(80%, #0e0e0e)); background: -webkit-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -moz-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -o-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); }
+.live .live-end.program02 { background-image: url("/images/program02_bg.jpg"); }
+.live .live-end.program03 { background-image: url("/images/program03_bg.jpg"); }
+.live .live-end-info { z-index: 10; position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
+.live .live-end-info span { margin: 0 auto 12px; font-size: 18px; line-height: 24px; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.2em; }
+@media (min-width: 768px) { .live .livestream, .live .livestream-end { margin-bottom: 48px; }
+  .live .live-end-info span { font-size: 24px; line-height: 36px; } }
+@media (min-width: 1024px) { .live .live-end { padding-top: 35.9%; }
+  .live .live-end-info span { font-size: 32px; line-height: 48px; }
+  .live .stream { padding-top: 56%; }
   .live .chatroom { position: absolute; width: 100%; top: 0; right: 0; bottom: 0; padding-top: 0; }
   .live .chatroom iframe { position: absolute; top: 0; bottom: 0; width: calc(100%); height: 100%; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) { .live .stream { padding-top: 64%; } }
+@media (min-width: 1186px) { .live .live-end { padding-top: 39.1%; } }
 
 .share-button span { display: inline-block; margin-right: 6px; vertical-align: text-top; font-size: 15px; line-height: 24px; }
 .share-button .fb-share, .share-button .tweet { display: -moz-inline-stack; display: inline-block; vertical-align: middle; }
@@ -395,7 +405,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .fade.in { opacity: 1; }
 
 .live-countdown { position: relative; color: white; text-align: center; padding-top: 50%; }
-.live-countdown.counting { background-image: url("/images/program03_bg.jpg"); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.live-countdown.counting { background-image: url("/images/program04_bg.jpg"); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .live-countdown.counting:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 80, color-stop(0%, rgba(14, 14, 14, 0.3)), color-stop(80%, #0e0e0e)); background: -webkit-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -moz-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -o-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); }
 .live-countdown.counting .live-countdown-inner span { display: block; }
 .live-countdown.counting .live-countdown-inner .link { display: inline-block; }
@@ -473,26 +483,23 @@ img { max-width: 100%; margin-bottom: 24px; }
 .archive .point-of-view li:nth-child(18):before { content: "18"; }
 .archive .point-of-view li:nth-child(19):before { content: "19"; }
 .archive .point-of-view li:nth-child(20):before { content: "20"; }
-.archive .polis-result { margin: 0; padding: 0; border: 0; margin-top: 36px; list-style: none; }
+.archive .polis-data .block-title { margin-bottom: 0; border-bottom: none; }
+.archive .polis-result { margin: 0; padding: 0; border: 0; list-style: none; }
 .archive .polis-result .animation .percentage-bar { width: 60%; opacity: 0; }
 .archive .polis-result .animation.is-active .percentage-bar { width: 100%; opacity: 0.85; }
-.archive .polis-result li { position: relative; }
-.archive .polis-result .percentage-bar-wrap { position: absolute; z-index: 5; top: -12px; right: 0; bottom: -12px; text-align: right; }
-.archive .polis-result .percentage-bar { display: inline-block; height: 100%; background-color: #4a4a4a; opacity: 0.85; -webkit-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15); box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15); -webkit-transition: width 1s, opacity 1s; -webkit-transition-delay: 0.5s, 0.5s; -moz-transition: width 1s 0.5s, opacity 1s 0.5s; -o-transition: width 1s 0.5s, opacity 1s 0.5s; transition: width 1s 0.5s, opacity 1s 0.5s; }
-.archive .polis-result .percentage-bar.mid { background-color: #373737; }
-.archive .polis-result .percentage-bar.low { background-color: #242424; }
-.archive .polis-result .polis-content { position: relative; z-index: 10; padding: 12px 0; }
+.archive .polis-result li { position: relative; margin-bottom: 6px; background: #333333; }
+.archive .polis-result .polis-content { position: relative; z-index: 10; padding: 12px; }
 .archive .polis-result .polis-content:after { content: ""; display: table; clear: both; }
-.archive .polis-result .polis-content .percentage { padding-left: 12px; padding-bottom: 12px; font-size: 28px; line-height: 28px; color: #e63082; }
-.archive .polis-result .polis-content .comment { display: block; overflow: hidden; padding: 0 12px; }
+.archive .polis-result .polis-content .percentage { padding-bottom: 12px; text-align: center; font-size: 28px; line-height: 28px; color: #e63082; }
+.archive .polis-result .polis-content .comment { display: block; overflow: hidden; margin-bottom: 0; padding-left: 12px; font-size: 15px; line-height: 30px; }
 @media (min-width: 768px) { .archive .archive-content { position: relative; }
   .archive .point-of-view { padding-left: 72px; }
   .archive .point-of-view li { position: relative; margin-bottom: 24px; }
   .archive .point-of-view li:before { position: absolute; top: 0; left: -72px; width: 56px; text-align: right; margin-top: 3px; margin-left: 0; margin-bottom: 0; }
-  .archive .polis-result .polis-content { position: relative; z-index: 10; padding: 24px 0; }
+  .archive .polis-result .polis-content { position: relative; z-index: 10; padding: 24px; }
   .archive .polis-result .polis-content:after { content: ""; display: table; clear: both; }
-  .archive .polis-result .polis-content .percentage { float: left; width: 104px; padding-left: 24px; font-size: 36px; line-height: 36px; color: #e63082; }
-  .archive .polis-result .polis-content .comment { display: block; overflow: hidden; padding: 0 24px; } }
+  .archive .polis-result .polis-content .percentage { float: left; width: 104px; font-size: 36px; line-height: 36px; color: #e63082; }
+  .archive .polis-result .polis-content .comment { display: block; overflow: hidden; padding-left: 24px; } }
 @media (min-width: 1024px) { .archive { padding-top: 48px; }
   .archive .summary { position: absolute; top: 0; bottom: 0; width: 39.9%; min-height: 100%; margin-top: 0px; padding: 36px; }
   .archive .summary-inner { height: 100%; }
@@ -505,8 +512,8 @@ img { max-width: 100%; margin-bottom: 24px; }
   .archive .switch-content { padding: 36px; }
   .archive .archive-content .block-content { max-width: 90%; }
   .archive .archive-content .polis-data .block-content { max-width: 100%; }
-  .archive .archive-content .talk-data { float: left; width: calc(50% - 18px); }
-  .archive .archive-content .polis-data { float: right; width: calc(50% - 18px); } }
+  .archive .archive-content .talk-data { float: left; width: calc(57.5% - 18px); }
+  .archive .archive-content .polis-data { float: right; width: calc(42.5% - 18px); } }
 @media screen and (min-width: 1024px) and (max-width: 1136px) { .archive .summary-inner .program-number { font-size: 64px; line-height: 48px; } }
 
 .talk .container:after { content: ""; display: table; clear: both; }

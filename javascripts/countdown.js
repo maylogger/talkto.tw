@@ -1,5 +1,5 @@
-var openTime = moment.tz("2015-12-11 21:00", "Asia/Taipei");
-var closeTime = moment.tz("2015-12-11 22:00", "Asia/Taipei");
+var openTime = moment.tz("2015-12-16 21:00", "Asia/Taipei");
+var closeTime = moment.tz("2015-12-16 22:00", "Asia/Taipei");
 
 $('.countdown').countdown(openTime.toDate()).on('update.countdown', function(event) {
   $('.live-countdown').addClass('counting');
