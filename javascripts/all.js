@@ -10,7 +10,7 @@ if ($('.program-slider').length != 0) {
     slidesToShow: 5,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
-    centerMode: false,
+    centerMode: true,
     centerPadding: '0px',
     infinite: true,
     focusOnSelect: true,
@@ -39,18 +39,54 @@ if ($('#polis-link').length != 0) {
   });
 }
 
-if ( $('.animation').length != 0 ) {
-  function section_animation() {
-    var animationElements = $('.animation')
-    for (var i = 0; i < animationElements.length; i++) {
+
+function polisChart() {
+  if ( $('.polis-data').length != 0 ) {
+    var chartItem = $('.percentage');
+    for (var i = 0; i < chartItem.length; i++) {
       new Waypoint({
-        element: animationElements[i],
+        element: chartItem[i],
         handler: function(direction) {
-          $(this.element).addClass('is-active')
+          var chart = new Chartist.Pie(this.element, {
+            series: [this.element.getAttribute("data-percentage"),(100 - this.element.getAttribute("data-percentage"))]
+          },{
+            donut: true,
+            donutWidth: 3,
+            showLabel: false
+          });
+          chart.on('draw', function(data) {
+            if(data.type === 'slice') {
+              var pathLength = data.element._node.getTotalLength();
+              data.element.attr({
+                'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+              });
+              var animationDefinition = {
+                'stroke-dashoffset': {
+                  id: 'anim' + data.index,
+                  begin: 250,
+                  dur: 1500,
+                  from: -pathLength + 'px',
+                  to:  '0px',
+                  easing: Chartist.Svg.Easing.easeOutQuint,
+                  fill: 'freeze'
+                }
+              };
+              if(data.index !== 0) {
+                animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+              }
+              data.element.attr({
+                'stroke-dashoffset': -pathLength + 'px'
+              });
+              data.element.animate(animationDefinition, false);
+            }
+          });
+          $(window).resize(function(){
+            chart.off('draw');
+          });
+          this.disable();
         },
-        offset: '100%'
+        offset: '95%'
       })
     }
   }
-  section_animation();
 }
