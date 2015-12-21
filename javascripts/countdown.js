@@ -1,5 +1,6 @@
 var openTime = moment.tz("2015-12-23 21:00", "Asia/Taipei");
 var closeTime = moment.tz("2015-12-23 22:00", "Asia/Taipei");
+var archivingTime = moment.tz("2015-12-24 00:00", "Asia/Taipei");
 
 $('.countdown').countdown(openTime.toDate()).on('update.countdown', function(event) {
   $('.live-countdown').addClass('counting');
@@ -13,13 +14,13 @@ $('.countdown').countdown(openTime.toDate()).on('update.countdown', function(eve
     + '<div class="item"><div class="number">%S</div><div class="unit">SECS</div></div>'
   ));
   if (event.offset.days < 1 && event.offset.hours < 1) {
-    $('.livestream').html(''
+    $('.livestream.now').html(''
       + '<div class="main-content video"><div class="stream"><iframe src="https://livehouse.in/embed/channel/talktotaiwan/video" frameborder="0" allowfullscreen=""></iframe></div></div>'
       + '<div class="side-content chat"><div class="chatroom"><iframe src="https://livehouse.in/embed/channel/talktotaiwan/chatroom/dark" frameborder="0" allowfullscreen=""></iframe></div></div>'
     );
   }
 }).on('finish.countdown', function(event) {
-    $('.livestream').html(''
+    $('.livestream.now').html(''
       + '<div class="main-content video"><div class="stream"><iframe src="https://livehouse.in/embed/channel/talktotaiwan/video" frameborder="0" allowfullscreen=""></iframe></div></div>'
       + '<div class="side-content chat"><div class="chatroom"><iframe src="https://livehouse.in/embed/channel/talktotaiwan/chatroom/dark" frameborder="0" allowfullscreen=""></iframe></div></div>'
     );
@@ -31,4 +32,10 @@ $('.now-program .link').countdown(closeTime.toDate()).on('update.countdown', fun
   }
 }).on('finish.countdown', function(event) {
     $(this).remove();
+});
+
+$('.livestream').countdown(archivingTime.toDate()).on('finish.countdown', function(event) {
+    $(this).addClass('end').html(''
+      + '<div class="live-end"><div class="live-end-info"><span>直播已結束，感謝您的收看<br>節目彙整處理中<span></div></div>'
+    );
 });
