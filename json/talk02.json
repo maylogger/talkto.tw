@@ -72,14 +72,6 @@
       "percentage" : 98.78
    },
    {
-      "comment_body" : "我覺得課綱的制定，應該要有公開、明確的法制化程序。",
-      "id" : 10,
-      "idx" : 8,
-      "n_agree" : 151,
-      "n_disagree" : 2,
-      "percentage" : 98.69
-   },
-   {
       "comment_body" : "我認為學校不是托兒所，人格養成還是必須回歸家庭。家長不應該逃避責任，漠不關心孩子的成長，然後出事再來說「我孩子很乖的，一定是被誰誰給帶壞⋯」",
       "id" : 11,
       "idx" : 44,
@@ -134,14 +126,6 @@
       "n_agree" : 118,
       "n_disagree" : 4,
       "percentage" : 96.72
-   },
-   {
-      "comment_body" : "我覺得「非學校型態」的實驗教育值得推廣。",
-      "id" : 18,
-      "idx" : 6,
-      "n_agree" : 146,
-      "n_disagree" : 5,
-      "percentage" : 96.68
    },
    {
       "comment_body" : "我覺得最重要的讓現場的教師少做一點行政相關事務，或是有專門的行政人員處理。",
@@ -264,14 +248,6 @@
       "percentage" : 91.3
    },
    {
-      "comment_body" : "我覺得大學「修習遠距教學學分數不得超過畢業總學分數的二分之一」的限制，應該交由各系所自行決定。",
-      "id" : 34,
-      "idx" : 5,
-      "n_agree" : 103,
-      "n_disagree" : 10,
-      "percentage" : 91.15
-   },
-   {
       "comment_body" : "我覺得大學的必修、選修比例，以及修課所佔時間應該要重新調整。讓學生有更多自由學習的機會。",
       "id" : 35,
       "idx" : 46,
@@ -392,28 +368,12 @@
       "percentage" : 78.44
    },
    {
-      "comment_body" : "我有修過線上課程平台的學程。",
-      "id" : 50,
-      "idx" : 9,
-      "n_agree" : 83,
-      "n_disagree" : 24,
-      "percentage" : 77.57
-   },
-   {
       "comment_body" : "我認為台灣的教育預算應該要更高",
       "id" : 51,
       "idx" : 13,
       "n_agree" : 81,
       "n_disagree" : 24,
       "percentage" : 77.14
-   },
-   {
-      "comment_body" : "我覺得課程制定的過程，應該讓學生參與。",
-      "id" : 52,
-      "idx" : 7,
-      "n_agree" : 107,
-      "n_disagree" : 34,
-      "percentage" : 75.88
    },
    {
       "comment_body" : "想要品質就要有足夠的資源，我想台灣教育應該擁有更多的資源",
@@ -480,14 +440,6 @@
       "percentage" : 56.31
    },
    {
-      "comment_body" : "我覺得在網路時代，線上教材可以取代老師「授業」的作用。",
-      "id" : 61,
-      "idx" : 4,
-      "n_agree" : 74,
-      "n_disagree" : 69,
-      "percentage" : 51.74
-   },
-   {
       "comment_body" : "我認為台灣的學校必須被真正的背企業化整合，開放讓民間具規模的企業併購學校，而且是放手併購，私立的該做，國立的更該做，學校獲利強的，您也可以買企業，企業強的，你也能夠買學校，學生畢業本來就必須去企業，企業本來就該培養人才，魚與水的關係，是時候該檢視了。",
       "id" : 62,
       "idx" : 65,
@@ -520,14 +472,6 @@
       "percentage" : 43.85
    },
    {
-      "comment_body" : "我目前是學生。",
-      "id" : 66,
-      "idx" : 1,
-      "n_agree" : 41,
-      "n_disagree" : 53,
-      "percentage" : 43.61
-   },
-   {
       "comment_body" : "全世界只有台灣的中小學生下課需家長接送，造成學生普遍依賴家長，是國家幼苗競爭力低落的象徵。",
       "id" : 67,
       "idx" : 54,
@@ -542,21 +486,5 @@
       "n_agree" : 27,
       "n_disagree" : 57,
       "percentage" : 32.14
-   },
-   {
-      "comment_body" : "我是學生的家長。",
-      "id" : 69,
-      "idx" : 3,
-      "n_agree" : 15,
-      "n_disagree" : 62,
-      "percentage" : 19.48
-   },
-   {
-      "comment_body" : "我是教師。",
-      "id" : 70,
-      "idx" : 2,
-      "n_agree" : 9,
-      "n_disagree" : 57,
-      "percentage" : 13.63
    }
 ]

@@ -1,8 +1,8 @@
 var openTime = moment.tz("2015-12-23 21:00", "Asia/Taipei");
 var closeTime = moment.tz("2015-12-23 22:00", "Asia/Taipei");
-var archivingTime = moment.tz("2015-12-24 00:00", "Asia/Taipei");
+var openTimeNext = moment.tz("2015-12-30 21:00", "Asia/Taipei");
 
-$('.countdown').countdown(openTime.toDate()).on('update.countdown', function(event) {
+$('.countdown.now').countdown(openTime.toDate()).on('update.countdown', function(event) {
   $('.live-countdown').addClass('counting');
   $(this).html(event.strftime(''
     + '<div class="item"><div class="number">%D</div><div class="unit">DAYS</div></div>'
@@ -28,14 +28,21 @@ $('.countdown').countdown(openTime.toDate()).on('update.countdown', function(eve
 
 $('.now-program .link').countdown(closeTime.toDate()).on('update.countdown', function(event) {
   if (event.offset.days < 1 && event.offset.hours < 1) {
-    $(this).html('觀看直播 Live →');
+    $(this).addClass('livenow').html('觀看直播 Live →');
   }
 }).on('finish.countdown', function(event) {
     $(this).remove();
 });
 
-$('.livestream').countdown(archivingTime.toDate()).on('finish.countdown', function(event) {
-    $(this).addClass('end').html(''
-      + '<div class="live-end"><div class="live-end-info"><span>直播已結束，感謝您的收看<br>節目彙整處理中<span></div></div>'
-    );
+$('.countdown.next').countdown(openTimeNext.toDate()).on('update.countdown', function(event) {
+  $('.live-countdown.next').addClass('counting');
+  $(this).html(event.strftime(''
+    + '<div class="item"><div class="number">%D</div><div class="unit">DAYS</div></div>'
+    + '<div class="colon">：</div>'
+    + '<div class="item"><div class="number">%H</div><div class="unit">HOURS</div></div>'
+    + '<div class="colon">：</div>'
+    + '<div class="item"><div class="number">%M</div><div class="unit">MINS</div></div>'
+    + '<div class="colon">：</div>'
+    + '<div class="item"><div class="number">%S</div><div class="unit">SECS</div></div>'
+  ));
 });

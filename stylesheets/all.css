@@ -152,7 +152,7 @@ code { font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Mo
 
 .btn { -webkit-font-smoothing: subpixel-antialiased; }
 
-body { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color: white; background-color: #0e0e0e; }
+body { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: subpixel-antialiased; text-rendering: optimizeLegibility; color: white; background-color: #0e0e0e; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; }
 
@@ -275,6 +275,18 @@ img { max-width: 100%; margin-bottom: 24px; }
 .block .block-content p { letter-spacing: 0.05em; }
 @media (min-width: 1024px) { .block .block-title { font-size: 18px; line-height: 24px; } }
 
+@-webkit-keyframes livebtn-animation { 0% { width: 0%; z-index: 2; }
+  50% { width: 100%; z-index: 2; }
+  51% { width: 100%; z-index: 1; } }
+
+@-moz-keyframes livebtn-animation { 0% { width: 0%; z-index: 2; }
+  50% { width: 100%; z-index: 2; }
+  51% { width: 100%; z-index: 1; } }
+
+@keyframes livebtn-animation { 0% { width: 0%; z-index: 2; }
+  50% { width: 100%; z-index: 2; }
+  51% { width: 100%; z-index: 1; } }
+
 .slider { background-color: #0e0e0e; overflow: hidden; }
 
 .program-slider { position: relative; max-height: 840px; overflow: hidden; }
@@ -291,7 +303,9 @@ img { max-width: 100%; margin-bottom: 24px; }
 .program-slider .slider-for .program-info .guest { font-size: 18px; line-height: 36px; color: #e63082; letter-spacing: 0.1em; }
 .program-slider .slider-for .program-info .title { font-size: 30px; line-height: 36px; color: white; }
 .program-slider .slider-for .program-info .time { font-size: 16px; line-height: 36px; color: #aaaaaa; }
-.program-slider .slider-for .program-info .link { margin-top: 6px; display: inline-block; padding: 6px 12px; color: white; font-size: 13px; line-height: 24px; background-color: #e63082; text-decoration: none; }
+.program-slider .slider-for .program-info .link { position: relative; overflow: hidden; margin-top: 6px; display: inline-block; padding: 6px 12px; color: white; font-size: 13px; line-height: 24px; text-decoration: none; background-color: #e63082; }
+.program-slider .slider-for .program-info .link.livenow:before { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani1") top left no-repeat; -webkit-animation: livebtn-animation 5s infinite linear; -moz-animation: livebtn-animation 5s infinite linear; animation: livebtn-animation 5s infinite linear; }
+.program-slider .slider-for .program-info .link.livenow:after { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani2") top left no-repeat; -webkit-animation: livebtn-animation 5s 2.5s infinite linear; -moz-animation: livebtn-animation 5s 2.5s infinite linear; animation: livebtn-animation 5s 2.5s infinite linear; }
 .program-slider .slider-for .program-info .program-number { color: white; font-size: 72px; line-height: 72px; text-align: right; letter-spacing: -3px; }
 .program-slider .slider-for .program-info .gray-number { opacity: 0.5; }
 .program-slider .slider-for .program-info .pink-number { color: #e63082; opacity: 1; }
@@ -341,6 +355,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .live .program03 .live-end { background-image: url("/images/program03_bg.jpg"); }
 .live .program04 .live-end { background-image: url("/images/program04_bg.jpg"); }
 .live .program05 .live-end { background-image: url("/images/program05_bg.jpg"); }
+.live .program06 .live-end { background-image: url("/images/program06_bg.jpg"); }
 .live .live-end-info { z-index: 10; position: absolute; top: 50%; left: 0; right: 0; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
 .live .live-end-info span { margin: 0 auto 12px; font-size: 18px; line-height: 24px; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.2em; }
 @media (min-width: 768px) { .live .livestream { margin-bottom: 48px; }
@@ -408,6 +423,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 .live-countdown { position: relative; color: white; text-align: center; padding-top: 50%; }
 .live-countdown.counting { background-image: url("/images/program05_bg.jpg"); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.live-countdown.counting.next { background-image: url("/images/program06_bg.jpg"); }
 .live-countdown.counting:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 80, color-stop(0%, rgba(14, 14, 14, 0.3)), color-stop(80%, #0e0e0e)); background: -webkit-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -moz-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -o-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); }
 .live-countdown.counting .live-countdown-inner span { display: block; }
 .live-countdown.counting .live-countdown-inner .link { display: inline-block; }
