@@ -307,8 +307,8 @@ img { max-width: 100%; margin-bottom: 24px; }
 .program-slider .slider-for .program-info .title { font-size: 28px; line-height: 36px; color: white; }
 .program-slider .slider-for .program-info .time { font-size: 16px; line-height: 36px; color: #aaaaaa; }
 .program-slider .slider-for .program-info .link { position: relative; overflow: hidden; margin-top: 6px; display: inline-block; padding: 6px 17px; color: white; font-size: 13px; line-height: 24px; text-decoration: none; background-color: #e63082; }
-.program-slider .slider-for .program-info .link.livenow:before { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani1-small") top left no-repeat; -webkit-animation: livebtn-animation 5s infinite linear; -moz-animation: livebtn-animation 5s infinite linear; animation: livebtn-animation 5s infinite linear; }
-.program-slider .slider-for .program-info .link.livenow:after { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani2-small") top left no-repeat; -webkit-animation: livebtn-animation 5s 2.5s infinite linear; -moz-animation: livebtn-animation 5s 2.5s infinite linear; animation: livebtn-animation 5s 2.5s infinite linear; }
+.program-slider .slider-for .program-info .link.livenow:before { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani1-small.svg") top left no-repeat; -webkit-animation: livebtn-animation 5s infinite linear; -moz-animation: livebtn-animation 5s infinite linear; animation: livebtn-animation 5s infinite linear; }
+.program-slider .slider-for .program-info .link.livenow:after { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani2-small.svg") top left no-repeat; -webkit-animation: livebtn-animation 5s 2.5s infinite linear; -moz-animation: livebtn-animation 5s 2.5s infinite linear; animation: livebtn-animation 5s 2.5s infinite linear; }
 .program-slider .slider-for .program-info .program-number { color: white; font-size: 72px; line-height: 72px; text-align: right; letter-spacing: -3px; }
 .program-slider .slider-for .program-info .gray-number { opacity: 0.5; }
 .program-slider .slider-for .program-info .pink-number { color: #e63082; opacity: 1; }
@@ -334,8 +334,8 @@ img { max-width: 100%; margin-bottom: 24px; }
   .program-slider .slider-for .program-info .title { font-size: 48px; line-height: 60px; }
   .program-slider .slider-for .program-info .time { font-size: 18px; line-height: 36px; }
   .program-slider .slider-for .program-info .link { margin-top: 12px; font-size: 18px; line-height: 36px; }
-  .program-slider .slider-for .program-info .link.livenow:before { background: url("/images/live-btn-ani1") top left no-repeat; }
-  .program-slider .slider-for .program-info .link.livenow:after { background: url("/images/live-btn-ani2") top left no-repeat; }
+  .program-slider .slider-for .program-info .link.livenow:before { background: url("/images/live-btn-ani1.svg") top left no-repeat; }
+  .program-slider .slider-for .program-info .link.livenow:after { background: url("/images/live-btn-ani2.svg") top left no-repeat; }
   .program-slider .slider-for .program-info .program-number { font-size: 96px; line-height: 96px; }
   .program-slider .slider-for .program-info .link + .program-number { margin-top: -64px; } }
 @media (min-width: 1024px) { .program-slider .slider-header { top: 48px; }
