@@ -39,6 +39,14 @@ if ($('#polis-link').length != 0) {
   });
 }
 
+// if ($('.bio-content').length != 0) {
+//   var bioContent = $('.bio-content');
+//   if (bioContent.outerHeight(true) >= 250) {
+//     bioContent.addClass('collapse').on('click', function() {
+//       bioContent.removeClass('collapse');
+//     });
+//   }
+// }
 
 function polisChart() {
   if ( $('.polis-data').length != 0 ) {

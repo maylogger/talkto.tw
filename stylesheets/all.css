@@ -150,9 +150,9 @@ body { font-family: "Helvetica Neue", "Helvetica", "Arial", "PingFangTC-Light", 
 
 code { font-family: "Anonymous Pro", "Inconsolata", "Consolas Regular Font", "Monaco", "Courier New", MonoSpace; font-weight: 400; font-style: normal; }
 
-.btn { -webkit-font-smoothing: subpixel-antialiased; }
+p, .btn { -webkit-font-smoothing: subpixel-antialiased; }
 
-body { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: subpixel-antialiased; text-rendering: optimizeLegibility; color: white; background-color: #0e0e0e; }
+body { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color: white; background-color: #0e0e0e; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; }
 
@@ -277,15 +277,18 @@ img { max-width: 100%; margin-bottom: 24px; }
 
 @-webkit-keyframes livebtn-animation { 0% { width: 0%; z-index: 2; }
   50% { width: 100%; z-index: 2; }
-  51% { width: 100%; z-index: 1; } }
+  51% { width: 100%; z-index: 1; }
+  100% { width: 100%; z-index: 1; } }
 
 @-moz-keyframes livebtn-animation { 0% { width: 0%; z-index: 2; }
   50% { width: 100%; z-index: 2; }
-  51% { width: 100%; z-index: 1; } }
+  51% { width: 100%; z-index: 1; }
+  100% { width: 100%; z-index: 1; } }
 
 @keyframes livebtn-animation { 0% { width: 0%; z-index: 2; }
   50% { width: 100%; z-index: 2; }
-  51% { width: 100%; z-index: 1; } }
+  51% { width: 100%; z-index: 1; }
+  100% { width: 100%; z-index: 1; } }
 
 .slider { background-color: #0e0e0e; overflow: hidden; }
 
@@ -301,11 +304,11 @@ img { max-width: 100%; margin-bottom: 24px; }
 .program-slider .slider-for .container { position: relative; max-width: 1120px; min-height: 440px; max-height: 720px; height: 90vh; }
 .program-slider .slider-for .program-info { position: absolute; right: 12px; bottom: 2.5%; }
 .program-slider .slider-for .program-info .guest { font-size: 18px; line-height: 36px; color: #e63082; letter-spacing: 0.1em; }
-.program-slider .slider-for .program-info .title { font-size: 30px; line-height: 36px; color: white; }
+.program-slider .slider-for .program-info .title { font-size: 28px; line-height: 36px; color: white; }
 .program-slider .slider-for .program-info .time { font-size: 16px; line-height: 36px; color: #aaaaaa; }
-.program-slider .slider-for .program-info .link { position: relative; overflow: hidden; margin-top: 6px; display: inline-block; padding: 6px 12px; color: white; font-size: 13px; line-height: 24px; text-decoration: none; background-color: #e63082; }
-.program-slider .slider-for .program-info .link.livenow:before { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani1") top left no-repeat; -webkit-animation: livebtn-animation 5s infinite linear; -moz-animation: livebtn-animation 5s infinite linear; animation: livebtn-animation 5s infinite linear; }
-.program-slider .slider-for .program-info .link.livenow:after { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani2") top left no-repeat; -webkit-animation: livebtn-animation 5s 2.5s infinite linear; -moz-animation: livebtn-animation 5s 2.5s infinite linear; animation: livebtn-animation 5s 2.5s infinite linear; }
+.program-slider .slider-for .program-info .link { position: relative; overflow: hidden; margin-top: 6px; display: inline-block; padding: 6px 17px; color: white; font-size: 13px; line-height: 24px; text-decoration: none; background-color: #e63082; }
+.program-slider .slider-for .program-info .link.livenow:before { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani1-small") top left no-repeat; -webkit-animation: livebtn-animation 5s infinite linear; -moz-animation: livebtn-animation 5s infinite linear; animation: livebtn-animation 5s infinite linear; }
+.program-slider .slider-for .program-info .link.livenow:after { content: ""; overflow: hidden; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("/images/live-btn-ani2-small") top left no-repeat; -webkit-animation: livebtn-animation 5s 2.5s infinite linear; -moz-animation: livebtn-animation 5s 2.5s infinite linear; animation: livebtn-animation 5s 2.5s infinite linear; }
 .program-slider .slider-for .program-info .program-number { color: white; font-size: 72px; line-height: 72px; text-align: right; letter-spacing: -3px; }
 .program-slider .slider-for .program-info .gray-number { opacity: 0.5; }
 .program-slider .slider-for .program-info .pink-number { color: #e63082; opacity: 1; }
@@ -330,7 +333,9 @@ img { max-width: 100%; margin-bottom: 24px; }
   .program-slider .slider-for .program-info .guest { font-size: 21px; line-height: 36px; }
   .program-slider .slider-for .program-info .title { font-size: 48px; line-height: 60px; }
   .program-slider .slider-for .program-info .time { font-size: 18px; line-height: 36px; }
-  .program-slider .slider-for .program-info .link { margin-top: 12px; padding: 6px 18px; font-size: 18px; line-height: 36px; }
+  .program-slider .slider-for .program-info .link { margin-top: 12px; font-size: 18px; line-height: 36px; }
+  .program-slider .slider-for .program-info .link.livenow:before { background: url("/images/live-btn-ani1") top left no-repeat; }
+  .program-slider .slider-for .program-info .link.livenow:after { background: url("/images/live-btn-ani2") top left no-repeat; }
   .program-slider .slider-for .program-info .program-number { font-size: 96px; line-height: 96px; }
   .program-slider .slider-for .program-info .link + .program-number { margin-top: -64px; } }
 @media (min-width: 1024px) { .program-slider .slider-header { top: 48px; }
@@ -550,8 +555,13 @@ img { max-width: 100%; margin-bottom: 24px; }
   .archive .archive-content .content-row { margin-bottom: 48px; }
   .archive .archive-content .content-row:after { content: ""; display: table; clear: both; }
   .archive .archive-content .main-content { float: left; width: calc(57.5% - 18px); }
-  .archive .archive-content .side-content { float: right; width: calc(42.5% - 18px); } }
+  .archive .archive-content .side-content { float: right; width: calc(42.5% - 18px); }
+  .archive .bio-content { position: relative; }
+  .archive .bio-content.collapse { max-height: 250px; overflow: hidden; }
+  .archive .bio-content.collapse:after { content: ""; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(linear, to bottom, to top, color-stop(70%, rgba(14, 14, 14, 0)), color-stop(85%, #0e0e0e)); background: -webkit-linear-gradient(to bottom, rgba(14, 14, 14, 0) 70%, #0e0e0e 85%); background: -moz-linear-gradient(to bottom, rgba(14, 14, 14, 0) 70%, #0e0e0e 85%); background: -o-linear-gradient(to bottom, rgba(14, 14, 14, 0) 70%, #0e0e0e 85%); background: linear-gradient(to bottom, rgba(14, 14, 14, 0) 70%, #0e0e0e 85%); } }
 @media screen and (min-width: 1024px) and (max-width: 1136px) { .archive .summary-inner .program-number { font-size: 64px; line-height: 48px; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) { .archive .record .video-cover { display: none; }
+  .archive .link { -webkit-transform: translateY(0px); -moz-transform: translateY(0px); -ms-transform: translateY(0px); -o-transform: translateY(0px); transform: translateY(0px); } }
 
 .ct-series-b .ct-slice-donut { stroke: #aaaaaa; }
 
