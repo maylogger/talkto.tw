@@ -39,14 +39,15 @@ if ($('#polis-link').length != 0) {
   });
 }
 
-// if ($('.bio-content').length != 0) {
-//   var bioContent = $('.bio-content');
-//   if (bioContent.outerHeight(true) >= 250) {
-//     bioContent.addClass('collapse').on('click', function() {
-//       bioContent.removeClass('collapse');
-//     });
-//   }
-// }
+if ($('.bio-content').length != 0) {
+  var bioContent = $('.bio-content');
+  var bioContentHeight = $('.bio-content').outerHeight(true);
+  if (bioContentHeight >= 250) {
+    bioContent.addClass('collapse').on('click', function() {
+      bioContent.removeClass('collapse').css('height', bioContentHeight);
+    });
+  }
+}
 
 function polisChart() {
   if ( $('.polis-data').length != 0 ) {
