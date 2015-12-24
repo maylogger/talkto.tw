@@ -427,8 +427,8 @@ img { max-width: 100%; margin-bottom: 24px; }
 .fade.in { opacity: 1; }
 
 .live-countdown { position: relative; color: white; text-align: center; padding-top: 50%; }
-.live-countdown.counting { background-image: url("/images/program05_bg.jpg"); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-.live-countdown.counting.next { background-image: url("/images/program06_bg.jpg"); }
+.live-countdown.counting { background-image: url("/images/program06_bg.jpg"); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.live-countdown.counting.next { background-image: url("/images/program07_bg.jpg"); }
 .live-countdown.counting:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 80, color-stop(0%, rgba(14, 14, 14, 0.3)), color-stop(80%, #0e0e0e)); background: -webkit-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -moz-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: -o-radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); background: radial-gradient(rgba(14, 14, 14, 0.3) 0%, #0e0e0e 80%); }
 .live-countdown.counting .live-countdown-inner span { display: block; }
 .live-countdown.counting .live-countdown-inner .link { display: inline-block; }
@@ -610,7 +610,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .talk .switch-content.video { max-width: 760px; margin: 0 auto; }
 .talk .switch-content .tab-pane.iframe { position: relative; padding-top: 56.25%; }
 .talk .switch-content .tab-pane.iframe iframe { position: absolute; top: 0; width: 100%; height: 100%; }
-.talk .bio h3 { margin-bottom: 2px; font-size: 16px; line-height: 24px; font-weight: normal; }
+.talk .bio h3 { margin-bottom: 6px; font-size: 16px; line-height: 24px; font-weight: normal; }
 .talk .bio ul { margin-top: 0; }
 @media (min-width: 768px) { .talk .talk-content { padding-top: 48px; }
   .talk .talk-title { margin-top: 72px; }
