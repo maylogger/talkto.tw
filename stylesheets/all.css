@@ -457,6 +457,15 @@ img { max-width: 100%; margin-bottom: 24px; }
   .live-countdown .countdown .colon { font-size: 88px; line-height: 96px; } }
 @media (min-width: 1186px) { .live-countdown { padding-top: 39.1%; } }
 
+@-webkit-keyframes polisdata-fadein { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
+@-moz-keyframes polisdata-fadein { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
+@keyframes polisdata-fadein { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
 .archive { padding-top: 24px; padding-bottom: 48px; margin-bottom: 24px; }
 .archive .archive-header { position: relative; }
 .archive .archive-header:after { content: ""; display: table; clear: both; }
@@ -514,8 +523,10 @@ img { max-width: 100%; margin-bottom: 24px; }
 .archive .point-of-view li:nth-child(19):before { content: "19"; }
 .archive .point-of-view li:nth-child(20):before { content: "20"; }
 .archive .polis-data .block-title { margin-bottom: 0; border-bottom: none; }
-.archive .polis-result { margin: 0; padding: 0; border: 0; list-style: none; opacity: 0; -webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s; transition: opacity 0.5s; }
-.archive .polis-result.data-complete { opacity: 1; }
+.archive .polis-data .polis-loadmore { padding: 6px 0; font-size: 15px; line-height: 24px; font-weight: bold; color: #e63082; text-align: center; cursor: pointer; -webkit-transition: background-color 0.5s; -moz-transition: background-color 0.5s; -o-transition: background-color 0.5s; transition: background-color 0.5s; }
+.archive .polis-data .polis-loadmore:hover { background-color: #222222; }
+.archive .polis-result { margin: 0; padding: 0; border: 0; list-style: none; }
+.archive .polis-result .animation { -webkit-animation: polisdata-fadein 1s 1; -moz-animation: polisdata-fadein 1s 1; animation: polisdata-fadein 1s 1; }
 .archive .polis-result .animation .percentage-bar { width: 60%; opacity: 0; }
 .archive .polis-result .animation.is-active .percentage-bar { width: 100%; opacity: 0.85; }
 .archive .polis-result li { position: relative; margin-bottom: 6px; background: #333333; }

@@ -49,53 +49,78 @@ if ($('.bio-content').length != 0) {
   }
 }
 
-function polisChart() {
-  if ( $('.polis-data').length != 0 ) {
-    var chartItem = $('.percentage');
-    for (var i = 0; i < chartItem.length; i++) {
-      new Waypoint({
-        element: chartItem[i],
-        handler: function(direction) {
-          var chart = new Chartist.Pie(this.element, {
-            series: [this.element.getAttribute("data-percentage"),(100 - this.element.getAttribute("data-percentage"))]
-          },{
-            donut: true,
-            donutWidth: 3,
-            showLabel: false
-          });
-          chart.on('draw', function(data) {
-            if(data.type === 'slice') {
-              var pathLength = data.element._node.getTotalLength();
-              data.element.attr({
-                'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-              });
-              var animationDefinition = {
-                'stroke-dashoffset': {
-                  id: 'anim' + data.index,
-                  begin: 250,
-                  dur: 1500,
-                  from: -pathLength + 'px',
-                  to:  '0px',
-                  easing: Chartist.Svg.Easing.easeOutQuint,
-                  fill: 'freeze'
+function polisJSON() {
+  $.getJSON(jsonDataPath, function(json){
+    var i;
+    var dataLength = json.length;
+    var jsonDataIndex = 10;
+    function addData() {
+      for (i = jsonDataIndex - 10; i < dataLength && i < jsonDataIndex; i++) {
+        $('.polis-result').append(''
+        +'<li class="animation"><div class="polis-content"><div class="percentage-wrap"><div class="percentage" data-percentage="' + Math.round(json[i].percentage) + '"/></div><p class="comment">' + json[i].comment_body + '</p></div></li>'
+        );
+      };
+    };
+    function polisChart() {
+      var chartItem = $('.percentage');
+      for (i = jsonDataIndex - 10; i < dataLength && i < jsonDataIndex; i++) {
+        new Waypoint({
+          element: chartItem[i],
+          handler: function(direction) {
+            var chart = new Chartist.Pie(this.element, {
+              series: [this.element.getAttribute("data-percentage"),(100 - this.element.getAttribute("data-percentage"))]
+            },{
+              donut: true,
+              donutWidth: 3,
+              showLabel: false
+            });
+            chart.on('draw', function(data) {
+              if(data.type === 'slice') {
+                var pathLength = data.element._node.getTotalLength();
+                data.element.attr({
+                  'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+                });
+                var animationDefinition = {
+                  'stroke-dashoffset': {
+                    id: 'anim' + data.index,
+                    begin: 250,
+                    dur: 1500,
+                    from: -pathLength + 'px',
+                    to:  '0px',
+                    easing: Chartist.Svg.Easing.easeOutQuint,
+                    fill: 'freeze'
+                  }
+                };
+                if(data.index !== 0) {
+                  animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
                 }
-              };
-              if(data.index !== 0) {
-                animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+                data.element.attr({
+                  'stroke-dashoffset': -pathLength + 'px'
+                });
+                data.element.animate(animationDefinition, false);
               }
-              data.element.attr({
-                'stroke-dashoffset': -pathLength + 'px'
-              });
-              data.element.animate(animationDefinition, false);
-            }
-          });
-          $(window).resize(function(){
-            chart.off('draw');
-          });
-          this.disable();
-        },
-        offset: '95%'
-      })
-    }
-  }
+            });
+            $(window).resize(function(){
+              chart.off('draw');
+            });
+            this.disable();
+          },
+          offset: '95%'
+        })
+      }
+    };
+    function appendPolisData() {
+      addData();
+      polisChart();
+      jsonDataIndex = jsonDataIndex + 10;
+    };
+    appendPolisData();
+    $('.polis-loadmore').on('click', function(){
+      if ( i < dataLength ) appendPolisData();
+      if ( i > dataLength - 1 ) $(this).remove();
+    });
+  });
 }
+$(window).load(function(){
+  polisJSON();
+});
