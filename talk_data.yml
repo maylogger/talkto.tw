@@ -3,6 +3,7 @@
 -
   program_number: "1"
   program_number_full: "01"
+  program_topic: "醫療"
   guest: "柯文哲"
   title: "台灣醫療崩壞，健保亂象如何解決？"
   highlight_id: "EGfermw3XQk"
@@ -15,6 +16,7 @@
 -
   program_number: "2"
   program_number_full: "02"
+  program_topic: "教育"
   guest: "葉丙成"
   title: "20年教改過後，台灣教育困境如何翻轉？"
   highlight_id: "-0Q3c7zOnEk"
@@ -27,6 +29,7 @@
 -
   program_number: "3"
   program_number_full: "03"
+  program_topic: "產業"
   guest: "童子賢"
   title: "面對經濟全球化時代，產業創新的挑戰，台灣的出路在哪裡？"
   highlight_id: "CSKkdu1oGNk"
@@ -39,6 +42,7 @@
 -
   program_number: "4"
   program_number_full: "04"
+  program_topic: "居住"
   guest: "林洲民"
   title: "資本遊戲中，被犧牲的居住正義該如何實現？"
   highlight_id: "3vTU9bClPLY"
@@ -51,10 +55,11 @@
 -
   program_number: "5"
   program_number_full: "05"
+  program_topic: "食安"
   guest: "高志明"
   title: "食安危機連環爆，台灣該如何吃的安心？"
-  highlight_id: ""
-  complete_id: ""
+  highlight_id: "PjqSpaJIGBw"
+  complete_id: "-t_KPxKcvcE"
   polis_id: "2mekvf"
   polis_result: "talk05.json"
   intro: "彰化地院11月底對頂新做出無罪判決，將民眾的不滿掀到最高點，「秒買秒退」的抵制行動就是來自最草根的怒吼。但是別忘了，頂新所引發的劣質油案，只是近年來一系列食安問題的一環，當憤怒於頂新無罪時，我們可能忘了2004年發生過戴奧辛毒牛奶、鴨蛋事件，2007年的瘦肉精事件，2008年的三聚氰胺毒奶事件、2011年的塑化劑事件、2013年的大統油事件、2014年的連鎖茶飲食安事件....每次都是群情激憤，政府大動作宣誓，但，事過境遷後，下個食安醜聞照樣爆。這些教訓告訴我們的是，台灣食安出了系統性的問題，若沒全面性的解決，爆出下一個食安事件只是時間早晚而已。義美老總高志明，將從食品業者的角度，剖析台灣食安系統哪裡出了漏洞？這些問題又該如何解決？"
@@ -63,11 +68,12 @@
 -
   program_number: "6"
   program_number_full: "06"
+  program_topic: "國會"
   guest: "林濁水"
   title: "國會亂象叢生，改革從何下手？"
   highlight_id: ""
   complete_id: ""
-  polis_id: "null"
+  polis_id: "8beafmmdms"
   polis_result: "talk06.json"
   intro: "1987年，時任民進黨增額立委的朱高正在立法院跳上主席台並揮出第一拳，就此打響國會改革議題。1991年，當了43年的第一屆立法委員全數退職，「萬年國會」成為歷史，寫下國會改革的新頁。然而，歷經多次修憲與體制調整的立法院，從立委任職年數延長、席次減半，乃至從「複數選區不可讓渡制」改為「單一選區兩票制」，表面上看來立法院應該是越改越好，但為什麼從許多的民調顯示，人民仍然不信任國會，需要人民自組團體來監督國會？甚至在2014年3月18日，服貿事件引發人民不滿與疑慮並且佔領立法院，人民對立法院的不信任升到最高點。大家都在問：「我們的國會怎麼了？」國會是國家政治的火車頭，沒有高品質的國會，就不會有高品質的法案為人民服務，也無法有效監督政府。改革雖迫在眉梢，但到底該怎麼做，且聽曾任立委多年的林濁水先生來為您一一分析，並提出他的解決之道。"
   url: "http://talkto.tw/talk/06"
@@ -75,6 +81,7 @@
 -
   program_number: "7"
   program_number_full: "07"
+  program_topic: ""
   guest: ""
   title: "尚未公開"
   highlight_id: ""
@@ -87,6 +94,7 @@
 -
   program_number: "8"
   program_number_full: "08"
+  program_topic: ""
   guest: ""
   title: "尚未公開"
   highlight_id: ""
