@@ -59,6 +59,7 @@ function polisJSON() {
     var dataLength = json.length;
     var dataLoadStep = 10;
     var jsonDataIndex = dataLoadStep;
+    if ( dataLength == dataLoadStep ) $('.polis-loadmore').remove();
     function addData() {
       for (i = jsonDataIndex - dataLoadStep; i < dataLength && i < jsonDataIndex; i++) {
         $('.polis-result').append(''
@@ -122,7 +123,7 @@ function polisJSON() {
     appendPolisData();
     $('.polis-loadmore').on('click', function(){
       if ( i < dataLength ) appendPolisData();
-      if ( i > dataLength - 1 ) $(this).remove();
+      if ( i >= dataLength ) $(this).remove();
     });
   });
 }
