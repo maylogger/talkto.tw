@@ -129,5 +129,5 @@ function polisJSON() {
   });
 }
 $(window).load(function(){
-  polisJSON();
+  if ($('.polis-result').length != 0) polisJSON();
 });

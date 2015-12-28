@@ -140,7 +140,7 @@ td, th { padding: 0; }
 
 .gotham-light-wz-shs, .archive .point-of-view li:before { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 300; }
 
-.gotham-bold-wz-shs, .block .block-title .title-en, .block .block-title .title-tw, .program-slider .slider-for .program-info .time, .program-slider .slider-for .program-info .program-number, .program-slider .slider-nav .slider-content, .archive .program-info .program-number, .archive .polis-result .polis-content .percentage, .talk .talk-title .program-number { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 700; }
+.gotham-bold-wz-shs, .block .block-title .title-en, .block .block-title .title-tw, .program-slider .slider-for .program-info .time, .program-slider .slider-for .program-info .program-number, .program-slider .slider-nav .slider-content, .archive .program-info .program-number, .archive .polis-result .polis-content .percentage, .program-nav .program-info .program-number, .talk .talk-title .program-number { font-family: "Gotham SSm A", "Gotham SSm B", "source-han-sans-traditional", sans-serif; font-style: normal; font-weight: 700; }
 
 * html { font-size: 100%; }
 
@@ -584,8 +584,10 @@ img { max-width: 100%; margin-bottom: 24px; }
 .program-nav .program-info { display: none; margin-bottom: 0; opacity: 0; -webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s; transition: opacity 0.5s; }
 .program-nav .program-info:after { content: ""; display: table; clear: both; }
 .program-nav .program-info .program-number, .program-nav .program-info .program-topic { display: inline-block; }
-.program-nav .program-info .program-number { float: none; font-size: 28px; line-height: 72px; }
-.program-nav .program-info .program-topic { font-size: 24px; line-height: 72px; color: white; }
+.program-nav .program-info .program-number { float: none; margin-left: -6px; padding: 0 6px; font-size: 28px; line-height: 72px; color: white; }
+.program-nav .program-info .program-number .gray-number { opacity: 0.5; }
+.program-nav .program-info .program-number .pink-number { color: #e63082; }
+.program-nav .program-info .program-topic { font-size: 24px; line-height: 70px; color: white; vertical-align: top; }
 .program-nav .program-info .program-image { margin-bottom: 0; }
 .program-nav.prev { left: 0; padding-left: 40px; }
 .program-nav.prev:before { left: 0; border-right-color: rgba(255, 255, 255, 0.5); }
