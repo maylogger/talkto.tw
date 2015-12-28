@@ -498,6 +498,7 @@ img { max-width: 100%; margin-bottom: 24px; }
 .archive .link li .transcript:before { background-position: 0 0; }
 .archive .link li .polis-data:before { background-position: 0 -48px; }
 .archive .link li .extra:before { background-position: 0 -72px; }
+.archive .bio-content ul { margin-top: 0; }
 .archive .point-of-view { list-style: none; padding-left: 0; }
 .archive .point-of-view li { margin-bottom: 48px; }
 .archive .point-of-view li:before { content: ""; display: block; font-size: 40px; line-height: 40px; margin-left: -2px; margin-bottom: 3px; color: #e63082; }

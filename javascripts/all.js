@@ -49,13 +49,18 @@ if ($('.bio-content').length != 0) {
   }
 }
 
+if ( $('.title').length != 0 ) {
+  $('.title').macho({ 'length': 3 });
+}
+
 function polisJSON() {
   $.getJSON(jsonDataPath, function(json){
     var i;
     var dataLength = json.length;
-    var jsonDataIndex = 10;
+    var dataLoadStep = 10;
+    var jsonDataIndex = dataLoadStep;
     function addData() {
-      for (i = jsonDataIndex - 10; i < dataLength && i < jsonDataIndex; i++) {
+      for (i = jsonDataIndex - dataLoadStep; i < dataLength && i < jsonDataIndex; i++) {
         $('.polis-result').append(''
         +'<li class="animation"><div class="polis-content"><div class="percentage-wrap"><div class="percentage" data-percentage="' + Math.round(json[i].percentage) + '"/></div><p class="comment">' + json[i].comment_body + '</p></div></li>'
         );
@@ -63,7 +68,7 @@ function polisJSON() {
     };
     function polisChart() {
       var chartItem = $('.percentage');
-      for (i = jsonDataIndex - 10; i < dataLength && i < jsonDataIndex; i++) {
+      for (i = jsonDataIndex - dataLoadStep; i < dataLength && i < jsonDataIndex; i++) {
         new Waypoint({
           element: chartItem[i],
           handler: function(direction) {
@@ -112,7 +117,7 @@ function polisJSON() {
     function appendPolisData() {
       addData();
       polisChart();
-      jsonDataIndex = jsonDataIndex + 10;
+      jsonDataIndex = jsonDataIndex + dataLoadStep;
     };
     appendPolisData();
     $('.polis-loadmore').on('click', function(){
