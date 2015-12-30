@@ -26,13 +26,13 @@ $('.countdown.now').countdown(openTime.toDate()).on('update.countdown', function
     );
 });
 
-$('.now-program .link').countdown(closeTime.toDate()).on('update.countdown', function(event) {
-  if (event.offset.days < 1 && event.offset.hours < 1) {
-    $(this).addClass('livenow').html('觀看直播 Live →');
-  }
-}).on('finish.countdown', function(event) {
-    $(this).remove();
-});
+// $('.now-program .link').countdown(closeTime.toDate()).on('update.countdown', function(event) {
+//   if (event.offset.days < 1 && event.offset.hours < 1) {
+//     $(this).addClass('livenow').html('觀看直播 Live →');
+//   }
+// }).on('finish.countdown', function(event) {
+//     $(this).remove();
+// });
 
 // $('.countdown.next').countdown(openTimeNext.toDate()).on('update.countdown', function(event) {
 //   $('.live-countdown.next').addClass('counting');
