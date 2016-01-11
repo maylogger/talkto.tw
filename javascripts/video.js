@@ -15,11 +15,11 @@ function onPlayerReady(event) {
   var playButton = document.getElementById("play-button");
   playButton.addEventListener("click", function() {
     player.playVideo();
-    $('.archive-header').addClass('video-playing');
+    $('.archive-header-record, .archive-header-link').addClass('video-playing');
   });
 }
 function onPlayerStateChange(event) {
   if (event.data == 1) {
-    $('.archive-header').addClass('video-playing');
+    $('.archive-header-record, .archive-header-link').addClass('video-playing');
   }
 }

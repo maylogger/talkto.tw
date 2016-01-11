@@ -468,8 +468,8 @@ img { max-width: 100%; margin-bottom: 24px; }
   100% { opacity: 1; } }
 
 .archive { padding-top: 24px; padding-bottom: 48px; margin-bottom: 24px; }
-.archive .archive-header { position: relative; }
-.archive .archive-header:after { content: ""; display: table; clear: both; }
+.archive .archive-header-title, .archive .archive-header-record, .archive .archive-header-link { position: relative; }
+.archive .archive-header-title:after, .archive .archive-header-record:after, .archive .archive-header-link:after { content: ""; display: table; clear: both; }
 .archive .archive-content { margin-top: 24px; }
 .archive .record { position: relative; }
 .archive .record .video-wrap { max-width: 760px; margin: 0 auto; }
