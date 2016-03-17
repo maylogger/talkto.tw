@@ -1,3 +1,5 @@
+//使用 youtube api 讓自訂按鈕可以 call youtube player 的事件
+
 var tag = document.createElement('script');
 tag.src = "//www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];

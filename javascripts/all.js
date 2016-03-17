@@ -1,3 +1,5 @@
+// slider 設定，文件可參考 http://kenwheeler.github.io/slick/
+
 if ($('.program-slider').length != 0) {
   $('.slider-for').slick({
     slidesToShow: 1,
@@ -25,6 +27,8 @@ if ($('.program-slider').length != 0) {
   });
 }
 
+// 開播前 polis 按鈕的平滑 scroll
+
 if ($('#polis-link').length != 0) {
   $('#polis-link').on('click',function (e) {
     e.preventDefault();
@@ -39,6 +43,8 @@ if ($('#polis-link').length != 0) {
   });
 }
 
+// archive 頁面來賓介紹若超越250高會摺疊的 js
+
 if ($('.bio-content').length != 0) {
   var bioContent = $('.bio-content');
   var bioContentHeight = $('.bio-content').outerHeight(true);
@@ -49,18 +55,24 @@ if ($('.bio-content').length != 0) {
   }
 }
 
+// 處理標題斷行漏字的問題
+
 if ( $('.title').length != 0 ) {
   $('.title').macho({ 'length': 3 });
 }
 
+// archive 頁面 polis 統計資料的 function
+
 function polisJSON() {
+  // json 檔案讀取，路徑寫在各 archive 頁面
   $.getJSON(jsonDataPath, function(json){
     var i;
     var dataLength = json.length;
     var dataLoadStep = 10;
     var dataLoadButton = $('.polis-loadmore');
     var jsonDataIndex = dataLoadStep;
-    if ( dataLength == dataLoadStep ) dataLoadButton.remove();
+    if ( dataLoadStep >= dataLength ) dataLoadButton.remove();
+    // 將文字資料到進 .polis-result 裡
     function addData() {
       for (i = jsonDataIndex - dataLoadStep; i < dataLength && i < jsonDataIndex; i++) {
         $('.polis-result').append(''
@@ -68,6 +80,9 @@ function polisJSON() {
         );
       };
     };
+    // 讀取剛剛到好的文字資料中的 data-percentage，取得數值後畫 pie 圖
+    // 偵測 scroll 事件觸發畫圖使用 waypoints.js，文件可參考 http://imakewebthings.com/waypoints/
+    // 畫圖使用 chartist.js，文件可參考 https://gionkunz.github.io/chartist-js/
     function polisChart() {
       var chartItem = $('.percentage');
       for (i = jsonDataIndex - dataLoadStep; i < dataLength && i < jsonDataIndex; i++) {
@@ -116,12 +131,14 @@ function polisJSON() {
         })
       }
     };
+    // 執行上面兩個 function，並累加 DataIndex
     function appendPolisData() {
       addData();
       polisChart();
       jsonDataIndex = jsonDataIndex + dataLoadStep;
     };
     appendPolisData();
+    // 偵測若資料已全部讀完，移除讀取按鈕
     dataLoadButton.on('click', function(){
       if ( i < dataLength ) appendPolisData();
       if ( i >= dataLength ) $(this).remove();
